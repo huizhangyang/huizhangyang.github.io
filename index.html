@@ -567,7 +567,7 @@
 <a class="cat-suppression" href="#item-12"><span>12</span>2-D SPECAN: SAR 图像干扰谱分析与解耦分离技术</a>
 <a class="cat-suppression" href="#item-13"><span>13</span>SAR 图像域复合扫频干扰稀疏参数化估计技术</a>
 <a class="cat-suppression" href="#item-14"><span>14</span>SAR 空频域自适应干扰抑制技术</a>
-<a class="cat-enhancement" href="#item-15"><span>15</span>N 通道 SAR 图像 non-local 滤波增强技术</a>
+<a class="cat-enhancement" href="#item-15"><span>15</span>N 通道 SAR 图像去相干斑滤波增强技术</a>
 <a class="cat-visualization" href="#item-16"><span>16</span>SAR 图像 SSCC 彩色可视化增强技术</a></nav>
     </aside>
     <main>
@@ -679,7 +679,7 @@
         <article class="overview-card cat-suppression">
           <span class="num">09</span>
           <h3>BSF: SAR 图像域分块子空间滤波技术</h3>
-          <p>以分块子空间结构刻画 SLC 图像中的多类型干扰，实现图像域统一估计、分离和去除。</p>
+          <p>以分块子空间结构刻画 SAR 图像中的多类型干扰，实现图像域统一估计、分离和去除。</p>
         </article>
         
 
@@ -700,7 +700,7 @@
         <article class="overview-card cat-suppression">
           <span class="num">12</span>
           <h3>2-D SPECAN: SAR 图像干扰谱分析与解耦分离技术</h3>
-          <p>以二维谱分析驱动 LFM 扫频干扰谱聚焦、参数估计和解耦分离，在已成像 SLC 图像上完成污染识别、选择性压制与影像恢复。</p>
+          <p>以二维谱分析驱动 LFM 扫频干扰谱聚焦、参数估计和解耦分离，在已成像 SAR 图像上完成污染识别、选择性压制与影像恢复。</p>
         </article>
         
 
@@ -720,8 +720,8 @@
 
         <article class="overview-card cat-enhancement">
           <span class="num">15</span>
-          <h3>N 通道 SAR 图像 non-local 滤波增强技术</h3>
-          <p>建立多维 SAR 数据的 non-local 相似性约束，在多通道或多子视响应中提取稳定权重，实现斑点噪声压制、相干结构保持和弱散射细节保护的统一处理。</p>
+          <h3>N 通道 SAR 图像去相干斑滤波增强技术</h3>
+          <p>建立多维 SAR 数据一致性约束，在多通道或多子视响应中提取稳定权重，实现斑点噪声压制、相干结构保持和弱散射细节保护的统一处理。</p>
         </article>
         
 
@@ -753,13 +753,13 @@
               
             <figure class="figure-card pair">
               <img src="SAR技术成果展示版_assets/ffbp_fig01.jpg" alt="典型星载 SAR 真实场景快速高保真成像结果" loading="lazy">
-              <figcaption>图1 典型星载 SAR 真实场景快速高保真成像结果</figcaption>
+              <figcaption>图1.1 典型星载 SAR 真实场景快速高保真成像结果</figcaption>
             </figure>
             
 
             <figure class="figure-card pair">
               <img src="SAR技术成果展示版_assets/ffbp_psf_contour.jpg" alt="点扩展函数" loading="lazy">
-              <figcaption>图2 点扩展函数</figcaption>
+              <figcaption>图1.2 点扩展函数</figcaption>
             </figure>
             
             </div>
@@ -786,13 +786,13 @@
               
             <figure class="figure-card">
               <img src="SAR技术成果展示版_assets/tops_iw_full_focus.jpg" alt="Sentinel-1 IW/TOPS 多测绘带全景成像结果" loading="lazy">
-              <figcaption>图1 Sentinel-1 IW/TOPS 多测绘带全景成像结果</figcaption>
+              <figcaption>图2.1 Sentinel-1 IW/TOPS 多测绘带全景成像结果</figcaption>
             </figure>
             
 
             <figure class="figure-card">
               <img src="SAR技术成果展示版_assets/tops_iw_strip_full_20211027.jpg" alt="IW1/IW2/IW3 分测绘带聚焦结果" loading="lazy">
-              <figcaption>图2 IW1/IW2/IW3 分测绘带聚焦结果</figcaption>
+              <figcaption>图2.2 IW1/IW2/IW3 分测绘带聚焦结果</figcaption>
             </figure>
             
             </div>
@@ -819,13 +819,13 @@
               
             <figure class="figure-card wide natural-height">
               <img src="SAR技术成果展示版_assets/full.png" alt="典型场景 GMTI-ATI 运动目标检测标注结果" loading="lazy">
-              <figcaption>图1 典型场景 GMTI-ATI 运动目标检测标注结果</figcaption>
+              <figcaption>图3.1 典型场景 GMTI-ATI 运动目标检测标注结果</figcaption>
             </figure>
             
 
             <figure class="figure-card wide natural-height">
               <img src="SAR技术成果展示版_assets/boxed_crop_montage.jpg" alt="运动目标局部框选测速结果" loading="lazy">
-              <figcaption>图2 运动目标局部框选测速结果</figcaption>
+              <figcaption>图3.2 运动目标局部框选测速结果</figcaption>
             </figure>
             
             </div>
@@ -852,19 +852,19 @@
               
             <figure class="figure-card">
               <img src="SAR技术成果展示版_assets/motion_fig01.jpg" alt="真实机场 SAR 场景与运动目标位置标注" loading="lazy">
-              <figcaption>图1 真实机场 SAR 场景与运动目标位置标注</figcaption>
+              <figcaption>图4.1 真实机场 SAR 场景与运动目标位置标注</figcaption>
             </figure>
             
 
             <figure class="figure-card">
               <img src="SAR技术成果展示版_assets/motion_fig02.png" alt="运动目标成像增强效果" loading="lazy">
-              <figcaption>图2 运动目标成像增强效果</figcaption>
+              <figcaption>图4.2 运动目标成像增强效果</figcaption>
             </figure>
             
 
             <figure class="figure-card natural-height">
               <img src="SAR技术成果展示版_assets/motion_fig03.jpg" alt="运动状态判断结果示例" loading="lazy">
-              <figcaption>图3 运动状态判断结果示例</figcaption>
+              <figcaption>图4.3 运动状态判断结果示例</figcaption>
             </figure>
             
             </div>
@@ -891,13 +891,13 @@
               
             <figure class="figure-card wide natural-height">
               <img src="SAR技术成果展示版_assets/single_fig01.jpg" alt="单通道星载 SAR 运动目标检测叠加效果" loading="lazy">
-              <figcaption>图1 单通道星载 SAR 运动目标检测叠加效果</figcaption>
+              <figcaption>图5.1 单通道星载 SAR 运动目标检测叠加效果</figcaption>
             </figure>
             
 
             <figure class="figure-card wide natural-height">
               <img src="SAR技术成果展示版_assets/single_candidate_split_horizontal.jpg" alt="候选目标切片与增强显示示例" loading="lazy">
-              <figcaption>图2 候选目标切片与增强显示示例</figcaption>
+              <figcaption>图5.2 候选目标切片与增强显示示例</figcaption>
             </figure>
             
             </div>
@@ -924,19 +924,19 @@
               
             <figure class="figure-card">
               <img src="SAR技术成果展示版_assets/dualpol_fig01.jpg" alt="大功率主瓣全带宽噪声干扰抑制前后对比" loading="lazy">
-              <figcaption>图1 大功率主瓣全带宽噪声干扰抑制前后对比</figcaption>
+              <figcaption>图6.1 大功率主瓣全带宽噪声干扰抑制前后对比</figcaption>
             </figure>
             
 
             <figure class="figure-card">
               <img src="SAR技术成果展示版_assets/dualpol_fig02.png" alt="宽带噪声干扰抑制前后对比" loading="lazy">
-              <figcaption>图2 宽带噪声干扰抑制前后对比</figcaption>
+              <figcaption>图6.2 宽带噪声干扰抑制前后对比</figcaption>
             </figure>
             
 
             <figure class="figure-card">
               <img src="SAR技术成果展示版_assets/dualpol_fig03.png" alt="转发调制干扰抑制前后对比" loading="lazy">
-              <figcaption>图3 转发调制干扰抑制前后对比</figcaption>
+              <figcaption>图6.3 转发调制干扰抑制前后对比</figcaption>
             </figure>
             
             </div>
@@ -950,7 +950,7 @@
             <div class="intro-block">
               <h3>内容简介</h3>
               <p>该成果面向单视复数 SAR 图像中的有源干扰识别与前置质检，重点解决干扰形态多变、强弱差异大、人工判读难以稳定覆盖的问题。星载 SAR 在频谱共用和电磁活动密集区域工作时，可能受到间歇采样转发干扰、线性调频脉冲、宽带噪声及其他无意电磁辐射污染。此类污染在幅度图上可能表现为亮带、斑块、条纹或局部异常，单靠灰度强弱判断容易与地物散射、成像旁瓣和噪声起伏混淆。该成果从 SAR 图像的子带响应入手，利用干扰像素在不同子带中的能量分布不均匀特征，构建子带对比度和子带熵两类可解释特征，将干扰由模糊的图像异常转化为可定位、可筛查、可复核的统计对象。</p>
-<p>技术展示层面，该成果不公开阈值求解和模型细节，而是呈现子带特征图、检测标注图和处理前后对比结果。其创新点在于把干扰与非干扰像素在子带域的起伏差异用于稳定判别，并把恒虚警思想引入阈值控制，使检测结果能够适配不同场景和不同干扰强度。该方法可作为干扰抑制前的入口，也可作为批量 SAR 数据质检手段，对受污染影像进行自动分级、区域标注和复核材料生成。对于只掌握 SLC 产品、无法回到原始回波链路的应用单位，该技术提供了直接处理已成像产品的有效路径。</p>
+<p>技术展示层面，该成果不公开阈值求解和模型细节，而是呈现子带特征图、检测标注图和处理前后对比结果。其创新点在于把干扰与非干扰像素在子带域的起伏差异用于稳定判别，并把恒虚警思想引入阈值控制，使检测结果能够适配不同场景和不同干扰强度。该方法可作为干扰抑制前的入口，也可作为批量 SAR 数据质检手段，对受污染影像进行自动分级、区域标注和复核材料生成。对于只掌握 SAR 产品、无法回到原始回波链路的应用单位，该技术提供了直接处理已成像产品的有效路径。</p>
 <p>军用场景可用于战场电磁环境监测、受干扰侦察图像筛查、重点区域影像质量判别、干扰活动线索提示和抗干扰处理前置判定。民用场景可服务卫星数据质检、商业遥感产品筛选、灾害应急影像可用性判断、海陆资源调查前置清洗和历史影像治理。交付能力包括子带对比度图、子带熵图、干扰检测标注图、疑似干扰区域清单、质量筛查报告和可嵌入式检测模块，可接入批处理系统、遥感产品生产链和人工复核平台。</p>
             </div>
             <div class="value-grid">
@@ -963,13 +963,13 @@
               
             <figure class="figure-card">
               <img src="SAR技术成果展示版_assets/paper_subband_page14.png" alt="子带对比度与子带熵干扰特征及检测结果示例" loading="lazy">
-              <figcaption>图1 子带对比度与子带熵干扰特征及检测结果示例</figcaption>
+              <figcaption>图7.1 子带对比度与子带熵干扰特征及检测结果示例</figcaption>
             </figure>
             
 
             <figure class="figure-card">
               <img src="SAR技术成果展示版_assets/yang_fig01.png" alt="哨兵一号 SAR 数据子带特征提取结果" loading="lazy">
-              <figcaption>图2 哨兵一号 SAR 数据子带特征提取结果</figcaption>
+              <figcaption>图7.2 哨兵一号 SAR 数据子带特征提取结果</figcaption>
             </figure>
             
             </div>
@@ -982,7 +982,7 @@
             <h2>SAR 图像 Lambda-1 恒虚警干扰检测技术</h2>
             <div class="intro-block">
               <h3>内容简介</h3>
-              <p>该成果面向 SLC SAR 图像中的自适应干扰检测和批量质量控制，解决弱干扰不易发现、强干扰形态不固定、固定阈值跨场景失效的问题。干扰进入 SAR 图像后，往往会使图像块内部出现明显的主导成分，体现在协方差结构中就是最大特征值被抬升。该成果抓住这一结构变化，以图像块为基本处理单元，对干扰引起的主导特征进行检测，使判断依据从单像素灰度异常转向局部数据结构异常。相比仅依赖幅度、纹理或人工经验的筛查方式，该技术更适合处理大幅宽、多批次、不同平台来源的 SAR 影像。</p>
+              <p>该成果面向 SAR 图像中的自适应干扰检测和批量质量控制，解决弱干扰不易发现、强干扰形态不固定、固定阈值跨场景失效的问题。干扰进入 SAR 图像后，往往会使图像块内部出现明显的主导成分，体现在协方差结构中就是最大特征值被抬升。该成果抓住这一结构变化，以图像块为基本处理单元，对干扰引起的主导特征进行检测，使判断依据从单像素灰度异常转向局部数据结构异常。相比仅依赖幅度、纹理或人工经验的筛查方式，该技术更适合处理大幅宽、多批次、不同平台来源的 SAR 影像。</p>
 <p>该成果的技术创新在于建立最大特征值驱动的自适应检测机制，并把恒虚警控制嵌入阈值确定过程。对外展示时，只呈现图像块检测结果、干扰区域标注、误警控制效果和处理前后复核图，不公开分布拟合、窗口修正和参数求解细节。该路线不依赖大量标注样本，能够在同一套口径下处理强干扰、弱干扰以及不同分辨率、不同采样方式带来的统计差异。它既可以作为独立质检工具，也可以作为后续干扰抑制算法的前端开关，避免对无干扰数据进行不必要处理。</p>
 <p>军用场景可用于侦察影像入库前质检、受干扰区域快速标注、战场电磁活动异常提示、干扰压制处理任务分流和重点目标区影像可用性判断。民用场景可用于商业卫星数据生产、海量 SAR 影像归档、灾害应急图像筛选、海事监管数据质检和基础设施巡检影像可用性评估。交付能力包括干扰检测标注图、图像块级质量标签、批量质检清单、异常区域复核材料和前置检测软件模块，可与干扰抑制、产品发布和人工审核流程衔接。</p>
             </div>
@@ -996,7 +996,7 @@
               
             <figure class="figure-card wide fixed-height">
               <img src="SAR技术成果展示版_assets/paper_lambda1_page11.png" alt="Lambda-1 检测器干扰标注与滤波结果示例" loading="lazy">
-              <figcaption>图1 Lambda-1 检测器干扰标注与滤波结果示例</figcaption>
+              <figcaption>图8.1 Lambda-1 检测器干扰标注与滤波结果示例</figcaption>
             </figure>
             
             </div>
@@ -1009,12 +1009,12 @@
             <h2>BSF: SAR 图像域分块子空间滤波技术</h2>
             <div class="intro-block">
               <h3>内容简介</h3>
-              <p>该成果面向 SLC SAR 图像中的宽带、窄带、连续波和脉冲型干扰去除，解决多类型干扰共存情况下难以建立统一后处理方法的问题。星载 SAR 在 L、C、X 等频段工作时，会受到广播通信、地面雷达、导航和其他电子系统辐射影响，形成不同形态的电磁干扰伪影。许多干扰已经进入聚焦图像产品，难以取得原始回波重新预处理。该成果以图像域分块子空间滤波为核心口径，在 SLC 图像域直接估计并去除干扰成分。</p>
-<p>技术创新体现在两个方面：一是以图像块为处理单元，适配大幅宽 SLC 数据的空间变化；二是把不同干扰形态统一到子空间分离口径下，避免针对每一种污染单独设计处理链。对外展示时，重点呈现多平台、多干扰类型的处理前后对比、干扰分量图和局部细节保持效果，不公开分块尺寸、子空间维数和具体求解流程。该技术特别适合批量处理 ERS、ENVISAT/ASAR、Sentinel-1、GF-3 等来源的受扰 SLC 数据，为后续图像判读、变化检测和相干处理提供可用输入。同时，处理结果能够保留干扰分量与恢复影像的对应关系，便于判读人员核查被扣除内容是否属于电磁污染，而不是场景内真实目标。</p>
-<p>军用场景可用于受污染侦察图像修复、海岸与港口目标判读保障、战场电子活动区域影像恢复、批量任务数据筛选和重点目标复核。民用场景可用于商业 SAR 产品质量提升、海洋监测、灾害应急、国土资源调查、农业遥感和历史数据治理。交付能力包括分块处理流程、干扰去除结果图、干扰分量图、处理前后对比材料和可嵌入后处理软件模块，可作为 SLC 产品生产线的通用干扰去除单元。</p>
+              <p>该成果面向 SAR 图像中的宽带、窄带、连续波和脉冲型干扰去除，解决多类型干扰共存情况下难以建立统一后处理方法的问题。星载 SAR 在 L、C、X 等频段工作时，会受到广播通信、地面雷达、导航和其他电子系统辐射影响，形成不同形态的电磁干扰伪影。许多干扰已经进入聚焦图像产品，难以取得原始回波重新预处理。该成果以图像域分块子空间滤波为核心口径，在 SAR 图像域直接估计并去除干扰成分。</p>
+<p>技术创新体现在两个方面：一是以图像块为处理单元，适配大幅宽 SAR 数据的空间变化；二是把不同干扰形态统一到子空间分离口径下，避免针对每一种污染单独设计处理链。对外展示时，重点呈现多平台、多干扰类型的处理前后对比、干扰分量图和局部细节保持效果，不公开分块尺寸、子空间维数和具体求解流程。该技术特别适合批量处理 ERS、ENVISAT/ASAR、Sentinel-1、GF-3 等来源的受扰 SAR 数据，为后续图像判读、变化检测和相干处理提供可用输入。同时，处理结果能够保留干扰分量与恢复影像的对应关系，便于判读人员核查被扣除内容是否属于电磁污染，而不是场景内真实目标。</p>
+<p>军用场景可用于受污染侦察图像修复、海岸与港口目标判读保障、战场电子活动区域影像恢复、批量任务数据筛选和重点目标复核。民用场景可用于商业 SAR 产品质量提升、海洋监测、灾害应急、国土资源调查、农业遥感和历史数据治理。交付能力包括分块处理流程、干扰去除结果图、干扰分量图、处理前后对比材料和可嵌入后处理软件模块，可作为 SAR 产品生产线的通用干扰去除单元。</p>
             </div>
             <div class="value-grid">
-              <div><strong>技术创新</strong><p>以分块子空间结构刻画 SLC 图像中的多类型干扰，实现图像域统一估计、分离和去除。</p></div>
+              <div><strong>技术创新</strong><p>以分块子空间结构刻画 SAR 图像中的多类型干扰，实现图像域统一估计、分离和去除。</p></div>
               <div><strong>军用场景</strong><p>用于受污染侦察图像修复、海岸与港口目标判读保障、战场电子活动区域影像恢复、批量任务数据筛选和重点目标复核。</p></div>
               <div><strong>民用场景</strong><p>可用于商业 SAR 产品质量提升、海洋监测、灾害应急、国土资源调查、农业遥感和历史数据治理。</p></div>
               <div><strong>交付能力</strong><p>交付分块处理流程、干扰去除结果图、干扰分量图、处理前后对比材料和可嵌入后处理软件模块。</p></div>
@@ -1023,13 +1023,13 @@
               
             <figure class="figure-card">
               <img src="SAR技术成果展示版_assets/paper_bsf_page09.png" alt="分块子空间滤波对多类型干扰的去除结果示例" loading="lazy">
-              <figcaption>图1 分块子空间滤波对多类型干扰的去除结果示例</figcaption>
+              <figcaption>图9.1 分块子空间滤波对多类型干扰的去除结果示例</figcaption>
             </figure>
             
 
             <figure class="figure-card">
               <img src="SAR技术成果展示版_assets/yang_fig03.png" alt="复杂电磁场景下复合干扰抑制结果" loading="lazy">
-              <figcaption>图2 复杂电磁场景下复合干扰抑制结果</figcaption>
+              <figcaption>图9.2 复杂电磁场景下复合干扰抑制结果</figcaption>
             </figure>
             
             </div>
@@ -1056,7 +1056,7 @@
               
             <figure class="figure-card wide fixed-height">
               <img src="SAR技术成果展示版_assets/paper_drpca_page04.png" alt="字典建模与稳健 PCA 分离的窄带干扰抑制结果示例" loading="lazy">
-              <figcaption>图1 字典建模与稳健 PCA 分离的窄带干扰抑制结果示例</figcaption>
+              <figcaption>图10.1 字典建模与稳健 PCA 分离的窄带干扰抑制结果示例</figcaption>
             </figure>
             
             </div>
@@ -1083,7 +1083,7 @@
               
             <figure class="figure-card wide fixed-height">
               <img src="SAR技术成果展示版_assets/paper_rbsf_page07.png" alt="鲁棒分块子空间滤波对异质场景干扰的去除结果示例" loading="lazy">
-              <figcaption>图1 鲁棒分块子空间滤波对异质场景干扰的去除结果示例</figcaption>
+              <figcaption>图11.1 鲁棒分块子空间滤波对异质场景干扰的去除结果示例</figcaption>
             </figure>
             
             </div>
@@ -1096,27 +1096,27 @@
             <h2>2-D SPECAN: SAR 图像干扰谱分析与解耦分离技术</h2>
             <div class="intro-block">
               <h3>内容简介</h3>
-              <p>该成果面向已聚焦 SLC SAR 图像中的 LFM 扫频类干扰谱分析、参数估计与解耦分离，解决无法回到 Level-0 原始回波链路时仍需开展干扰修复的问题。现实业务中，大量数据以 SLC 或幅度产品形式流转，传统预处理方法难以覆盖已归档、已分发或外部获取的 SAR 产品。LFM 干扰在图像中常形成亮带、扫频纹理和局部辐射伪影，直接滤除容易损伤地物散射和相位关系。该成果把问题转入二维谱分析与谱聚焦口径，使干扰在可控域内集中呈现，再开展选择性压制和影像恢复。</p>
+              <p>该成果面向已聚焦 SAR 图像中的 LFM 扫频类干扰谱分析、参数估计与解耦分离，解决无法回到 Level-0 原始回波链路时仍需开展干扰修复的问题。现实业务中，大量数据以 SAR 图像或幅度产品形式流转，传统预处理方法难以覆盖已归档、已分发或外部获取的 SAR 产品。LFM 干扰在图像中常形成亮带、扫频纹理和局部辐射伪影，直接滤除容易损伤地物散射和相位关系。该成果把问题转入二维谱分析与谱聚焦口径，使干扰在可控域内集中呈现，再开展选择性压制和影像恢复。</p>
 <p>技术创新在于将二维谱分析、谱聚焦、参数估计和选择性分离纳入同一处理链路，在不重启完整成像流程的条件下对已成像 SAR 产品进行污染分离。对外展示时，重点呈现含干扰图像、谱域聚焦结果、解耦分离结果、去除后影像和局部质量对比，不公开谱聚焦算子、滤波窗口、求解流程和具体参数配置。该方法适合对干扰形态明确、任务时限紧、数据幅宽大的场景开展快速处理，可与图像域分块子空间滤波形成互补：前者强调谱域解释和解耦，后者强调局部结构自适应。</p>
-<p>军用场景可用于受扫频雷达干扰的侦察图像快速恢复、机场港口和海岸岛礁影像抢救处理、重点目标区判读保障、战场电磁活动影响评估和遥感情报产品修复。民用场景可用于商业 SAR 数据快速修复、灾害应急影像保障、海事监管、基础设施巡检、历史受扰 SLC 产品再利用和遥感服务可信度评估。交付能力包括二维谱分析结果图、谱聚焦处理图、干扰去除前后对比图、恢复影像、局部复核切片和快速处理模块，可嵌入批量后处理、质检和产品生产流程。</p>
+<p>军用场景可用于受扫频雷达干扰的侦察图像快速恢复、机场港口和海岸岛礁影像抢救处理、重点目标区判读保障、战场电磁活动影响评估和遥感情报产品修复。民用场景可用于商业 SAR 数据快速修复、灾害应急影像保障、海事监管、基础设施巡检、历史受扰 SAR 产品再利用和遥感服务可信度评估。交付能力包括二维谱分析结果图、谱聚焦处理图、干扰去除前后对比图、恢复影像、局部复核切片和快速处理模块，可嵌入批量后处理、质检和产品生产流程。</p>
             </div>
             <div class="value-grid">
-              <div><strong>技术创新</strong><p>以二维谱分析驱动 LFM 扫频干扰谱聚焦、参数估计和解耦分离，在已成像 SLC 图像上完成污染识别、选择性压制与影像恢复。</p></div>
+              <div><strong>技术创新</strong><p>以二维谱分析驱动 LFM 扫频干扰谱聚焦、参数估计和解耦分离，在已成像 SAR 图像上完成污染识别、选择性压制与影像恢复。</p></div>
               <div><strong>军用场景</strong><p>用于受扫频雷达干扰的侦察图像快速恢复、机场港口和海岸岛礁影像抢救处理、重点目标区判读保障和战场电磁活动影响评估。</p></div>
-              <div><strong>民用场景</strong><p>可用于商业 SAR 数据快速修复、灾害应急影像保障、海事监管、基础设施巡检、历史受扰 SLC 产品再利用和遥感服务可信度评估。</p></div>
+              <div><strong>民用场景</strong><p>可用于商业 SAR 数据快速修复、灾害应急影像保障、海事监管、基础设施巡检、历史受扰 SAR 产品再利用和遥感服务可信度评估。</p></div>
               <div><strong>交付能力</strong><p>交付二维谱分析结果图、谱聚焦处理图、干扰去除前后对比图、恢复影像、局部复核切片和快速处理模块。</p></div>
             </div>
             <div class="gallery">
               
             <figure class="figure-card wide fixed-height">
               <img src="SAR技术成果展示版_assets/paper_specan_page09.png" alt="二维谱分析滤波处理前后对比示例" loading="lazy">
-              <figcaption>图1 二维谱分析滤波处理前后对比示例</figcaption>
+              <figcaption>图12.1 二维谱分析滤波处理前后对比示例</figcaption>
             </figure>
             
 
             <figure class="figure-card wide fixed-height">
               <img src="SAR技术成果展示版_assets/paper_lsfm_page03.png" alt="二维谱分析驱动的扫频干扰解耦分离结果示例" loading="lazy">
-              <figcaption>图2 二维谱分析驱动的扫频干扰解耦分离结果示例</figcaption>
+              <figcaption>图12.2 二维谱分析驱动的扫频干扰解耦分离结果示例</figcaption>
             </figure>
             
             </div>
@@ -1143,13 +1143,13 @@
               
             <figure class="figure-card">
               <img src="SAR技术成果展示版_assets/paper_sparse_lfm_page04.jpg" alt="稀疏参数化估计支撑的复合扫频干扰去除结果示例" loading="lazy">
-              <figcaption>图1 稀疏参数化估计支撑的复合扫频干扰去除结果示例</figcaption>
+              <figcaption>图13.1 稀疏参数化估计支撑的复合扫频干扰去除结果示例</figcaption>
             </figure>
             
 
             <figure class="figure-card">
               <img src="SAR技术成果展示版_assets/yang_fig05.png" alt="复杂电磁场景干扰特征可视化示例" loading="lazy">
-              <figcaption>图2 复杂电磁场景干扰特征可视化示例</figcaption>
+              <figcaption>图13.2 复杂电磁场景干扰特征可视化示例</figcaption>
             </figure>
             
             </div>
@@ -1176,13 +1176,13 @@
               
             <figure class="figure-card">
               <img src="SAR技术成果展示版_assets/subband_asf_bsf.jpg" alt="典型受扰场景空频域干扰抑制效果" loading="lazy">
-              <figcaption>图1 典型受扰场景空频域干扰抑制效果</figcaption>
+              <figcaption>图14.1 典型受扰场景空频域干扰抑制效果</figcaption>
             </figure>
             
 
             <figure class="figure-card">
               <img src="SAR技术成果展示版_assets/subband_focusing_compare.jpg" alt="TOPS 聚焦图像干扰抑制前后对比" loading="lazy">
-              <figcaption>图2 TOPS 聚焦图像干扰抑制前后对比</figcaption>
+              <figcaption>图14.2 TOPS 聚焦图像干扰抑制前后对比</figcaption>
             </figure>
             
             </div>
@@ -1192,31 +1192,50 @@
         <section class="achievement cat-enhancement" id="item-15">
           <div class="content-frame">
             <div class="section-kicker">成果 15</div>
-            <h2>N 通道 SAR 图像 non-local 滤波增强技术</h2>
+            <h2>N 通道 SAR 图像去相干斑滤波增强技术</h2>
             <div class="intro-block">
               <h3>内容简介</h3>
-              <p>该成果针对高分辨 SAR 幅度图、干涉图、多视彩色显示图和受干扰图像中的斑点噪声、相干纹理退化与弱散射细节损失问题，建立多维数据一致约束下的稳健 non-local 滤波增强路线。SAR 图像不同于光学图像，斑点噪声与相干成像机理紧密相关，直接平滑会削弱点目标、道路边界、建筑轮廓和干涉相位结构；只在单幅图像上寻找相似块，又难以利用多通道、多子视、多极化或多维显示结果中已经存在的冗余信息。该技术以多维 SAR 数据为处理对象，在空间邻域和维度邻域中寻找稳定相似关系，把同一地物在不同维度中的一致响应转化为滤波权重，使噪声压制与结构保持在同一流程内完成。</p>
+              <p>该成果针对高分辨 SAR 幅度图、干涉图、多视彩色显示图和受干扰图像中的斑点噪声、相干纹理退化与弱散射细节损失问题，建立多维数据一致约束下的稳健去相干斑滤波增强路线。SAR 图像不同于光学图像，斑点噪声与相干成像机理紧密相关，直接平滑会削弱点目标、道路边界、建筑轮廓和干涉相位结构；只在单幅图像上寻找相似块，又难以利用多通道、多子视、多极化或多维显示结果中已经存在的冗余信息。该技术以多维 SAR 数据为处理对象，在空间邻域和维度邻域中寻找稳定相似关系，把同一地物在不同维度中的一致响应转化为滤波权重，使噪声压制与结构保持在同一流程内完成。</p>
 <p>该成果的展示重点放在处理前后幅度图、干涉彩色图和受噪声干扰场景的可视化对比。处理后，均匀区域噪声颗粒得到压制，道路、建筑边缘和强散射点保持清晰，彩色干涉纹理连续性更好，受污染区域的可判读结构得到恢复。底层权重构造、阈值设置和 GPU 并行实现细节不对外展开，但可明确说明该方法支持多维 SAR 数据输入，可按 CPU/GPU 条件部署，并适合与彩色编码、相干滤波、图像增强和专题判读流程组合使用。其核心价值不是普通降噪，而是在保持相干信息和弱目标线索的前提下，为后续检测、分类、干涉分析和成果展示提供更稳定的图像基础。</p>
 <p>军用场景可用于重点区域 SAR 图像判读前增强、低信噪比侦察图像修复、机场港口设施识别、边海防区域精细观察、受干扰图像复核和多维 SAR 产品质量保障。民用场景可服务城市基础设施巡检、灾害应急解译、地表形变观察、矿区与港区监测、商业遥感产品美化和高分辨 SAR 图像发布。交付能力包括幅度图增强结果、干涉图增强结果、受污染场景恢复图、批处理脚本、GPU 加速滤波模块和可嵌入式图像增强接口，可接入既有 SAR 产品生产线。</p>
             </div>
             <div class="value-grid">
-              <div><strong>技术创新</strong><p>建立多维 SAR 数据的 non-local 相似性约束，在多通道或多子视响应中提取稳定权重，实现斑点噪声压制、相干结构保持和弱散射细节保护的统一处理。</p></div>
+              <div><strong>技术创新</strong><p>建立多维 SAR 数据一致性约束，在多通道或多子视响应中提取稳定权重，实现斑点噪声压制、相干结构保持和弱散射细节保护的统一处理。</p></div>
               <div><strong>军用场景</strong><p>用于侦察影像判读前增强、低信噪比图像修复、机场港口设施识别、边海防精细观察、受干扰图像复核和多维 SAR 产品质控。</p></div>
               <div><strong>民用场景</strong><p>可用于城市基础设施巡检、灾害应急解译、地表形变观察、矿区与港区监测、商业遥感产品美化和高分辨 SAR 图像发布。</p></div>
               <div><strong>交付能力</strong><p>交付幅度图增强结果、干涉图增强结果、受污染场景恢复图、批处理脚本、GPU 加速滤波模块和可嵌入式图像增强接口。</p></div>
             </div>
             <div class="gallery">
               
-            <figure class="figure-card">
+            
+
+
+              
+            
+<figure class="figure-card">
+              <img src="SAR技术成果展示版_assets/nl_sar_ifg_compare.jpg" alt="SAR 干涉彩色图滤波增强与均值滤波对比" loading="lazy">
+              <figcaption>图15.1 SAR 干涉彩色图滤波增强与均值滤波对比</figcaption>
+            </figure>
+            
+            
+
+              
+            
+<figure class="figure-card">
               <img src="SAR技术成果展示版_assets/nl_sar_ifg2_compare.jpg" alt="干涉图细节对比" loading="lazy">
-              <figcaption>图1 干涉图细节对比</figcaption>
+              <figcaption>图15.2 干涉图细节对比</figcaption>
             </figure>
             
 
-            <figure class="figure-card">
-              <img src="SAR技术成果展示版_assets/nl_sar_ifg_compare.jpg" alt="SAR 干涉彩色图滤波增强与均值滤波对比" loading="lazy">
-              <figcaption>图2 SAR 干涉彩色图滤波增强与均值滤波对比</figcaption>
-            </figure>
+            
+
+            
+            
+
+            
+
+            
+
             
             </div>
           </div>
@@ -1242,13 +1261,13 @@
               
             <figure class="figure-card">
               <img src="SAR技术成果展示版_assets/sscc_comparison.jpg" alt="SSCC 彩色增强与 CSI 风格结果对比" loading="lazy">
-              <figcaption>图1 SSCC 彩色增强与 CSI 风格结果对比</figcaption>
+              <figcaption>图16.1 SSCC 彩色增强与 CSI 风格结果对比</figcaption>
             </figure>
             
 
             <figure class="figure-card">
               <img src="SAR技术成果展示版_assets/sscc_iceye_qatar_csi.jpg" alt="Qatar 区域 SAR 彩色子视可视化结果" loading="lazy">
-              <figcaption>图2 Qatar 区域 SAR 彩色子视可视化结果</figcaption>
+              <figcaption>图16.2 Qatar 区域 SAR 彩色子视可视化结果</figcaption>
             </figure>
             
             </div>
