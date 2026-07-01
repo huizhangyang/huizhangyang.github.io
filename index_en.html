@@ -1,0 +1,1412 @@
+<!doctype html>
+<html lang="en" data-theme="command">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Huizhang Yang's Research Page</title>
+  <style>
+    :root, :root[data-theme="classic"] {
+      --content-width: 1080px;
+      --wide-width: 1180px;
+      --page-pad: clamp(22px, 5vw, 82px);
+      --bg: #f5f7f4;
+      --paper: #ffffff;
+      --surface: #ffffff;
+      --surface-2: #f0f5f2;
+      --surface-3: #e8efeb;
+      --ink: #17202a;
+      --muted: #65717f;
+      --line: #d8dee6;
+      --accent: #2f6f73;
+      --accent-2: #a8642a;
+      --deep: #193a42;
+      --image-bg: #e9ecef;
+      --sidebar: #fbfcfb;
+      --hero-a: rgba(16, 39, 48, 0.94);
+      --hero-b: rgba(47, 111, 115, 0.78);
+      --shadow: 0 18px 44px rgba(30, 46, 58, 0.10);
+    }
+    :root[data-theme="carbon"] {
+      --bg: #f4f4f4;
+      --paper: #ffffff;
+      --surface: #ffffff;
+      --surface-2: #f4f4f4;
+      --surface-3: #e0e0e0;
+      --ink: #161616;
+      --muted: #525252;
+      --line: #c6c6c6;
+      --accent: #0f62fe;
+      --accent-2: #8a3ffc;
+      --deep: #262626;
+      --image-bg: #ededed;
+      --sidebar: #ffffff;
+      --hero-a: rgba(22, 22, 22, 0.92);
+      --hero-b: rgba(15, 98, 254, 0.64);
+      --shadow: 0 18px 42px rgba(0, 0, 0, 0.10);
+    }
+    :root[data-theme="ant"] {
+      --bg: #f5f8ff;
+      --paper: #ffffff;
+      --surface: #ffffff;
+      --surface-2: #eef4ff;
+      --surface-3: #e6f0ff;
+      --ink: #17233d;
+      --muted: #5d6b82;
+      --line: #d6e4ff;
+      --accent: #1677ff;
+      --accent-2: #13c2c2;
+      --deep: #10294f;
+      --image-bg: #f0f5ff;
+      --sidebar: #ffffff;
+      --hero-a: rgba(15, 42, 92, 0.92);
+      --hero-b: rgba(22, 119, 255, 0.70);
+      --shadow: 0 20px 52px rgba(22, 119, 255, 0.14);
+    }
+    :root[data-theme="nord"] {
+      --bg: #2e3440;
+      --paper: #3b4252;
+      --surface: #3b4252;
+      --surface-2: #434c5e;
+      --surface-3: #4c566a;
+      --ink: #eceff4;
+      --muted: #d8dee9;
+      --line: #5d677a;
+      --accent: #88c0d0;
+      --accent-2: #a3be8c;
+      --deep: #eceff4;
+      --image-bg: #2e3440;
+      --sidebar: #242933;
+      --hero-a: rgba(36, 41, 51, 0.96);
+      --hero-b: rgba(94, 129, 172, 0.78);
+      --shadow: 0 22px 54px rgba(0, 0, 0, 0.24);
+    }
+    :root[data-theme="soft"] {
+      --bg: #f6f8fa;
+      --paper: #ffffff;
+      --surface: #ffffff;
+      --surface-2: #eff4f7;
+      --surface-3: #e3ecf0;
+      --ink: #20303c;
+      --muted: #60727f;
+      --line: #d4dfe5;
+      --accent: #2b7a78;
+      --accent-2: #5a7d37;
+      --deep: #1d4250;
+      --image-bg: #eef3f5;
+      --sidebar: #fbfcfd;
+      --hero-a: rgba(31, 66, 80, 0.90);
+      --hero-b: rgba(43, 122, 120, 0.72);
+      --shadow: 0 18px 42px rgba(42, 70, 82, 0.12);
+    }
+    :root[data-theme="radar"] {
+      --bg: #02070d;
+      --paper: #06101a;
+      --surface: #081624;
+      --surface-2: #0b2031;
+      --surface-3: #10314a;
+      --ink: #effcff;
+      --muted: #9fd7e4;
+      --line: #1f4f68;
+      --accent: #00e5ff;
+      --accent-2: #84ff6a;
+      --deep: #f3feff;
+      --image-bg: #02070d;
+      --sidebar: #030a12;
+      --hero-a: rgba(2, 7, 13, 0.98);
+      --hero-b: rgba(0, 229, 255, 0.30);
+      --shadow: 0 24px 58px rgba(0, 229, 255, 0.16);
+    }
+    :root[data-theme="command"] {
+      --bg: #050505;
+      --paper: #0e0e0e;
+      --surface: #121212;
+      --surface-2: #1b1b1b;
+      --surface-3: #242424;
+      --ink: #ffffff;
+      --muted: #d1d8dc;
+      --line: #3d464d;
+      --accent: #ffd000;
+      --accent-2: #00f0ff;
+      --deep: #ffffff;
+      --image-bg: #000000;
+      --sidebar: #090909;
+      --hero-a: rgba(0, 0, 0, 0.98);
+      --hero-b: rgba(255, 208, 0, 0.28);
+      --shadow: 0 24px 58px rgba(255, 208, 0, 0.12);
+    }
+    :root[data-theme="hf-spaces"] {
+      --bg: #fff8e8;
+      --paper: #ffffff;
+      --surface: #ffffff;
+      --surface-2: #fff3cf;
+      --surface-3: #ffe8a3;
+      --ink: #241a0a;
+      --muted: #6b5c42;
+      --line: #ead9ad;
+      --accent: #ff9d00;
+      --accent-2: #3772ff;
+      --deep: #201100;
+      --image-bg: #fff7df;
+      --sidebar: #fffaf0;
+      --hero-a: rgba(35, 22, 4, 0.86);
+      --hero-b: rgba(255, 157, 0, 0.62);
+      --shadow: 0 18px 42px rgba(115, 78, 13, 0.14);
+    }
+    :root[data-theme="hf-papers"] {
+      --bg: #f7f7f3;
+      --paper: #ffffff;
+      --surface: #ffffff;
+      --surface-2: #f0efe7;
+      --surface-3: #e7e4d8;
+      --ink: #242424;
+      --muted: #67645a;
+      --line: #d9d5c8;
+      --accent: #ffb000;
+      --accent-2: #6b7280;
+      --deep: #141414;
+      --image-bg: #f1efe6;
+      --sidebar: #fbfaf5;
+      --hero-a: rgba(18, 18, 18, 0.88);
+      --hero-b: rgba(255, 176, 0, 0.46);
+      --shadow: 0 16px 34px rgba(48, 43, 31, 0.12);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Microsoft YaHei", "Noto Sans SC", "PingFang SC", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.72;
+      letter-spacing: 0;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; }
+    .shell {
+      display: grid;
+      grid-template-columns: 304px minmax(0, 1fr);
+      min-height: 100vh;
+    }
+    aside {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      padding: 28px 22px;
+      background: var(--sidebar);
+      border-right: 1px solid var(--line);
+      overflow-y: auto;
+      color: var(--ink);
+    }
+    .brand {
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 16px;
+    }
+    .brand b { display: block; font-size: 18px; color: var(--deep); }
+    .brand span { display: block; margin-top: 6px; color: var(--muted); font-size: 13px; line-height: 1.42; }
+    .theme-switcher {
+      margin: 0 0 16px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+    }
+    .theme-switcher label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .theme-switcher select {
+      width: 100%;
+      min-height: 36px;
+      padding: 0 10px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      color: var(--ink);
+      background: var(--paper);
+      font: inherit;
+      font-size: 13px;
+      outline: none;
+    }
+    .theme-switcher select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 20%, transparent); }
+    .language-switcher {
+      margin: 0 0 16px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+    }
+    .language-switcher label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .language-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .language-options button {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      color: var(--ink);
+      background: var(--paper);
+      font: inherit;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .language-options button:hover,
+    .language-options button:focus-visible {
+      border-color: var(--accent);
+      outline: none;
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 20%, transparent);
+    }
+    .language-options button[aria-pressed="true"] {
+      border-color: var(--accent);
+      background: var(--accent);
+      color: #050505;
+    }
+
+    nav { display: grid; gap: 8px; }
+    nav a {
+      --cat-color: var(--accent);
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      align-items: start;
+      gap: 9px;
+      padding: 9px 8px 9px 10px;
+      border-left: 4px solid var(--cat-color);
+      border-radius: 8px;
+      color: var(--ink);
+      font-size: 13px;
+      line-height: 1.38;
+      background: transparent;
+    }
+    nav a:hover { background: var(--surface-2); }
+    nav span {
+      display: inline-grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: color-mix(in srgb, var(--cat-color) 18%, var(--surface));
+      color: var(--cat-color);
+      font-weight: 800;
+      font-size: 12px;
+    }
+    .cat-imaging { --cat-color: #2f6f73; }
+    .cat-motion { --cat-color: #3f6ea8; }
+    .cat-polarimetric { --cat-color: #7b5aa6; }
+    .cat-detection { --cat-color: #a8642a; }
+    .cat-suppression { --cat-color: #9a3f3f; }
+    .cat-enhancement { --cat-color: #4d7c47; }
+    .cat-visualization { --cat-color: #b07a2a; }
+    :root[data-theme="radar"] .cat-imaging { --cat-color: #00e5ff; }
+    :root[data-theme="radar"] .cat-motion { --cat-color: #57a6ff; }
+    :root[data-theme="radar"] .cat-polarimetric { --cat-color: #d6a7ff; }
+    :root[data-theme="radar"] .cat-detection { --cat-color: #ffd166; }
+    :root[data-theme="radar"] .cat-suppression { --cat-color: #ff6b6b; }
+    :root[data-theme="radar"] .cat-enhancement { --cat-color: #84ff6a; }
+    :root[data-theme="radar"] .cat-visualization { --cat-color: #ff8bd1; }
+    :root[data-theme="command"] .cat-imaging { --cat-color: #ffd000; }
+    :root[data-theme="command"] .cat-motion { --cat-color: #00f0ff; }
+    :root[data-theme="command"] .cat-polarimetric { --cat-color: #c8ff00; }
+    :root[data-theme="command"] .cat-detection { --cat-color: #ff9f1c; }
+    :root[data-theme="command"] .cat-suppression { --cat-color: #ff3b30; }
+    :root[data-theme="command"] .cat-enhancement { --cat-color: #00ff85; }
+    :root[data-theme="command"] .cat-visualization { --cat-color: #f15bb5; }
+    main { min-width: 0; }
+    .hero {
+      min-height: 76vh;
+      display: grid;
+      align-items: end;
+      padding: 80px var(--page-pad) 42px;
+      background:
+        linear-gradient(120deg, var(--hero-a), var(--hero-b)),
+        url("SAR技术成果展示版_assets/ffbp_fig01.jpg");
+      background-size: cover;
+      background-position: center;
+      color: #ffffff;
+    }
+    .hero-inner {
+      max-width: var(--wide-width);
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(34px, 5vw, 66px);
+      line-height: 1.08;
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+      letter-spacing: 0;
+    }
+    .hero p {
+      max-width: 850px;
+      margin: 20px auto 0;
+      font-size: 18px;
+      color: rgba(255,255,255,0.9);
+    }
+    .hero-meta {
+      display: grid;
+      gap: 5px;
+      margin: 18px auto 0;
+      color: rgba(255,255,255,0.88);
+      font-size: 16px;
+      line-height: 1.34;
+    }
+    .stat-strip {
+      max-width: var(--wide-width);
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 30px;
+    }
+    .stat-card {
+      min-height: 94px;
+      padding: 16px 18px;
+      border: 1px solid rgba(255,255,255,0.32);
+      border-radius: 8px;
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(8px);
+    }
+    .stat-card strong {
+      display: block;
+      font-size: 13px;
+      color: rgba(255,255,255,0.76);
+      font-weight: 800;
+    }
+    .stat-card span {
+      display: block;
+      margin-top: 8px;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 1.32;
+    }
+    .overview {
+      padding: 42px var(--page-pad);
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+    }
+    .overview-grid {
+      max-width: var(--wide-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .overview-card {
+      --cat-color: var(--accent);
+      border: 1px solid var(--line);
+      border-top: 4px solid var(--cat-color);
+      border-radius: 8px;
+      padding: 16px;
+      min-height: 190px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+    .overview-card .num {
+      color: var(--cat-color);
+      font-weight: 800;
+      font-size: 13px;
+    }
+    .overview-card h3 {
+      margin: 8px 0 10px;
+      font-size: 16px;
+      line-height: 1.38;
+      color: var(--deep);
+      overflow-wrap: anywhere;
+    }
+    .overview-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+    .research-item {
+      --cat-color: var(--accent);
+      padding: 58px var(--page-pad);
+      border-bottom: 1px solid var(--line);
+      border-top: 5px solid var(--cat-color);
+      background: var(--bg);
+    }
+    .research-item:nth-of-type(even) { background: var(--paper); }
+    .content-frame {
+      max-width: var(--content-width);
+      width: 100%;
+      margin-inline: auto;
+    }
+    .section-kicker {
+      color: var(--cat-color);
+      font-weight: 800;
+      letter-spacing: 0;
+      font-size: 13px;
+    }
+    .research-item h2 {
+      margin: 8px 0 24px;
+      color: var(--deep);
+      font-size: clamp(26px, 3.2vw, 42px);
+      line-height: 1.18;
+      letter-spacing: 0;
+      overflow-wrap: anywhere;
+    }
+    .intro-block {
+      width: 100%;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 24px 26px;
+      box-shadow: var(--shadow);
+    }
+    .intro-block h3 {
+      margin: 0 0 12px;
+      color: var(--cat-color);
+      font-size: 18px;
+    }
+    .intro-block p {
+      margin: 0 0 12px;
+      font-size: 16px;
+      text-align: justify;
+      color: var(--ink);
+    }
+    .intro-block p:last-child { margin-bottom: 0; }
+    .value-grid {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .value-grid div {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--cat-color);
+      border-radius: 8px;
+      padding: 16px 18px;
+      box-shadow: var(--shadow);
+    }
+    .value-grid strong {
+      display: block;
+      color: var(--deep);
+      margin-bottom: 8px;
+    }
+    .value-grid p {
+      margin: 0;
+      color: var(--ink);
+      font-size: 15px;
+      line-height: 1.66;
+    }
+    .gallery {
+      max-width: var(--content-width);
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin: 24px auto 0;
+    }
+    .figure-card {
+      margin: 0;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .figure-card.wide { grid-column: 1 / -1; }
+    .figure-card.pair { grid-column: span 1; }
+    .figure-card img {
+      display: block;
+      width: 100%;
+      height: clamp(260px, 34vw, 430px);
+      object-fit: contain;
+      background: var(--image-bg);
+    }
+    .figure-card.wide img { height: clamp(320px, 42vw, 560px); }
+    .figure-card.fixed-height img { height: clamp(260px, 34vw, 430px); }
+    .figure-card.natural-height img {
+      height: auto;
+      max-height: none;
+      object-fit: contain;
+    }
+    .figure-card figcaption {
+      padding: 10px 12px 12px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+      text-align: center;
+      border-top: 1px solid var(--line);
+      background: var(--surface);
+    }
+    footer {
+      padding: 30px var(--page-pad);
+      color: var(--muted);
+      background: var(--paper);
+      font-size: 13px;
+      border-top: 1px solid var(--line);
+    }
+    footer .content-frame { max-width: var(--wide-width); }
+    @media (max-width: 1080px) {
+      .shell { grid-template-columns: 1fr; }
+      aside { position: static; height: auto; }
+      .overview-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .stat-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .gallery, .value-grid { grid-template-columns: 1fr; }
+      .hero { min-height: 68vh; }
+    }
+    @media (max-width: 560px) {
+      .overview-grid { grid-template-columns: 1fr; }
+      .stat-strip { grid-template-columns: 1fr; }
+      .intro-block { padding: 18px; }
+      nav a { grid-template-columns: 30px 1fr; }
+      .hero p { font-size: 16px; }
+      .stat-card { min-height: 76px; }
+      .research-item { padding-top: 42px; padding-bottom: 42px; }
+    }
+    </style>
+</head>
+<body>
+  <div class="shell">
+    <aside>
+      <div class="brand">
+        <b>Radar Imaging / Detection / Electronic Countermeasures</b>
+        <span>Huizhang Yang / Nanjing University of Science and Technology</span>
+        <span>hzyang@njust.edu.cn</span>
+      </div>
+      <div class="theme-switcher">
+        <label for="themeSelect">Interface Style</label>
+        <select id="themeSelect" aria-label="Interface Style">
+          <option value="classic">Classic Tech</option>
+<option value="carbon">Carbon Gray</option>
+<option value="ant">Ant Blue</option>
+<option value="nord">Nord Dark</option>
+<option value="soft">Soft Light</option>
+<option value="radar">Radar Dark</option>
+<option value="command">Command High Contrast</option>
+<option value="hf-spaces">HF Spaces</option>
+<option value="hf-papers">HF Papers</option>
+        </select>
+      </div>
+      <div class="language-switcher">
+        <label>Language</label>
+        <div class="language-options" id="languageSelect" role="group" aria-label="Language">
+          <button type="button" data-lang="zh">中文</button>
+          <button type="button" data-lang="en">English</button>
+        </div>
+      </div>
+
+
+
+      <nav><a class="cat-imaging" href="#item-01"><span>01</span>Spaceborne SAR Ultra-High-Resolution Imaging Processing</a>
+<a class="cat-imaging" href="#item-02"><span>02</span>Spaceborne SAR Multi-Swath TOPS-Mode Imaging</a>
+<a class="cat-motion" href="#item-03"><span>03</span>Multichannel Spaceborne/Airborne SAR GMTI-ATI Weak-Target Detection and Velocity Estimation</a>
+<a class="cat-motion" href="#item-04"><span>04</span>Spaceborne SAR Moving-Target Sensing and Imaging Enhancement</a>
+<a class="cat-motion" href="#item-05"><span>05</span>Spaceborne SAR Moving-Target Automated Detection and Visualization</a>
+<a class="cat-polarimetric" href="#item-06"><span>06</span>Polarimetric SAR Interference Suppression and Image Reconstruction</a>
+<a class="cat-detection" href="#item-07"><span>07</span>SAR Active-Interference Feature Extraction and Adaptive Detection</a>
+<a class="cat-detection" href="#item-08"><span>08</span>SAR Image Lambda-1 Constant-False-Alarm Interference Detection</a>
+<a class="cat-suppression" href="#item-09"><span>09</span>BSF: Block Subspace Filtering in the SAR Image Domain</a>
+<a class="cat-suppression" href="#item-10"><span>10</span>DPRCA: Dictionary-Robust PCA Interference Separation</a>
+<a class="cat-suppression" href="#item-11"><span>11</span>RBSF: Robust Block Subspace Filtering for Heterogeneous SAR Scenes</a>
+<a class="cat-suppression" href="#item-12"><span>12</span>2-D SPECAN: SAR Image Interference Spectral Analysis and Decoupled Separation</a>
+<a class="cat-suppression" href="#item-13"><span>13</span>Sparse Parametric Estimation of Composite Sweep Interference in SAR Images</a>
+<a class="cat-suppression" href="#item-14"><span>14</span>SAR Spatial-Frequency Adaptive Interference Suppression</a>
+<a class="cat-enhancement" href="#item-15"><span>15</span>N-Channel SAR Image Speckle-Reduction Filtering and Enhancement</a>
+<a class="cat-visualization" href="#item-16"><span>16</span>SAR Image SSCC Color Visualization Enhancement</a></nav>
+    </aside>
+    <main>
+      <section class="hero">
+        <div class="hero-inner">
+          <h1>Radar Imaging / Detection / Electronic Countermeasures</h1>
+          <div class="hero-meta">
+            <span>Huizhang Yang</span>
+            <span>Nanjing University of Science and Technology</span>
+            <span>hzyang@njust.edu.cn</span>
+          </div>
+          <p>Built around spaceborne and airborne SAR mission chains, this portfolio covers high-resolution imaging, moving-target detection, active interference recognition, suppression, and image reconstruction for complex electromagnetic environments.</p>
+          <div class="stat-strip">
+        <div class="stat-card">
+          <strong>Radar Systems</strong>
+          <span>Synthetic Aperture Radar (SAR) / Spaceborne SAR / Polarimetric SAR / Radar Remote Sensing</span>
+        </div>
+        
+
+        <div class="stat-card">
+          <strong>Imaging Processing</strong>
+          <span>Imaging Algorithms / Radar Signal Processing / Parameter Estimation / TOPS Mode</span>
+        </div>
+        
+
+        <div class="stat-card">
+          <strong>Target Sensing</strong>
+          <span>GMTI / ATI / SAR Target Detection / SAR Target Recognition</span>
+        </div>
+        
+
+        <div class="stat-card">
+          <strong>Interference Countermeasures</strong>
+          <span>Interference Countermeasures / Radar Electronic Countermeasures / Interference Recognition / Interference Suppression</span>
+        </div>
+        
+
+        <div class="stat-card">
+          <strong>Image Products</strong>
+          <span>Image Enhancement / Image Reconstruction / Color Visualization / Quality Assessment</span>
+        </div>
+        
+
+        <div class="stat-card">
+          <strong>Interpretation Applications</strong>
+          <span>Radar Image Interpretation / Target Cues / Thematic Interpretation / Review Materials</span>
+        </div>
+        </div>
+        </div>
+      </section>
+      <section class="overview">
+        <div class="overview-grid">
+        <article class="overview-card cat-imaging">
+          <span class="num">01</span>
+          <h3>Spaceborne SAR Ultra-High-Resolution Imaging Processing</h3>
+          <p>Establishes the operating relationship among imaging scale, image quality, and task time limits. It defines interpretable processing boundaries for squinted, wide-scene, and strong-scattering conditions, reducing dependence on one-off empirical tuning.</p>
+        </article>
+
+        <article class="overview-card cat-imaging">
+          <span class="num">02</span>
+          <h3>Spaceborne SAR Multi-Swath TOPS-Mode Imaging</h3>
+          <p>Builds a complete TOPS raw-echo processing chain from azimuth-spectrum unfolding and precise focusing to burst merging and multi-swath stitching, forming an autonomous wide-coverage imaging capability.</p>
+        </article>
+
+        <article class="overview-card cat-motion">
+          <span class="num">03</span>
+          <h3>Multichannel Spaceborne/Airborne SAR GMTI-ATI Weak-Target Detection and Velocity Estimation</h3>
+          <p>Transforms motion-sensitive inter-channel differences into credible target-discrimination evidence and integrates candidate discovery, scene annotation, local review, and batch archiving into one processing chain.</p>
+        </article>
+
+        <article class="overview-card cat-motion">
+          <span class="num">04</span>
+          <h3>Spaceborne SAR Moving-Target Sensing and Imaging Enhancement</h3>
+          <p>Extends focused SAR products beyond static interpretation by extracting moving-target activity information from image anomalies and converting enhancement, localization, and state cues into displayable results.</p>
+        </article>
+
+        <article class="overview-card cat-motion">
+          <span class="num">05</span>
+          <h3>Spaceborne SAR Moving-Target Automated Detection and Visualization</h3>
+          <p>Builds an automated initial-screening route for high-resolution single-channel spaceborne SAR moving targets without relying on ATI or multichannel interferometric information, and converts detection, localization, chips, and structured outputs into a reviewable workflow.</p>
+        </article>
+
+        <article class="overview-card cat-polarimetric">
+          <span class="num">06</span>
+          <h3>Polarimetric SAR Interference Suppression and Image Reconstruction</h3>
+          <p>Uses dual-polarization differences to suppress strong interference directionally while preserving terrain boundaries, structural details, and amplitude relationships across multiple real interference scenarios.</p>
+        </article>
+
+        <article class="overview-card cat-detection">
+          <span class="num">07</span>
+          <h3>SAR Active-Interference Feature Extraction and Adaptive Detection</h3>
+          <p>Uses subband contrast and subband entropy to characterize interference fluctuations in SAR images, converts subband energy differences into interpretable evidence, and supports automatic annotation under constant-false-alarm control.</p>
+        </article>
+
+        <article class="overview-card cat-detection">
+          <span class="num">08</span>
+          <h3>SAR Image Lambda-1 Constant-False-Alarm Interference Detection</h3>
+          <p>Uses the maximum eigenvalue of image blocks as evidence of interference-dominant components and builds adaptive constant-false-alarm detection so that both strong and weak interference can be annotated and reviewed under one quality-control standard.</p>
+        </article>
+
+        <article class="overview-card cat-suppression">
+          <span class="num">09</span>
+          <h3>BSF: Block Subspace Filtering in the SAR Image Domain</h3>
+          <p>Uses block subspace structure to represent multiple interference types in SAR images, enabling unified estimation, separation, and removal directly in the image domain.</p>
+        </article>
+
+        <article class="overview-card cat-suppression">
+          <span class="num">10</span>
+          <h3>DPRCA: Dictionary-Robust PCA Interference Separation</h3>
+          <p>Combines SAR echo dictionary modeling with low-rank interference separation, replacing a large explicit two-dimensional dictionary with low-cost operators while preserving real scattering structures during narrowband interference suppression.</p>
+        </article>
+
+        <article class="overview-card cat-suppression">
+          <span class="num">11</span>
+          <h3>RBSF: Robust Block Subspace Filtering for Heterogeneous SAR Scenes</h3>
+          <p>Introduces strong-scatterer protection and quality-metric constraints into block subspace filtering so that interference removal balances suppression, bright-target preservation, and structural continuity.</p>
+        </article>
+
+        <article class="overview-card cat-suppression">
+          <span class="num">12</span>
+          <h3>2-D SPECAN: SAR Image Interference Spectral Analysis and Decoupled Separation</h3>
+          <p>Uses two-dimensional spectral analysis to drive LFM sweep interference spectral focusing, parameter estimation, and decoupled separation, completing contamination recognition, selective suppression, and image restoration on focused SAR images.</p>
+        </article>
+
+        <article class="overview-card cat-suppression">
+          <span class="num">13</span>
+          <h3>Sparse Parametric Estimation of Composite Sweep Interference in SAR Images</h3>
+          <p>Represents composite sweep interference as a multi-component combination, estimates key modulation features through sparse parametric estimation, and drives subsequent spectral focusing and selective removal.</p>
+        </article>
+
+        <article class="overview-card cat-suppression">
+          <span class="num">14</span>
+          <h3>SAR Spatial-Frequency Adaptive Interference Suppression</h3>
+          <p>Forms a broadly applicable and robust spatial-frequency interference suppression capability across SAR data types and contamination forms while preserving major terrain structures and interpretation conditions.</p>
+        </article>
+
+        <article class="overview-card cat-enhancement">
+          <span class="num">15</span>
+          <h3>N-Channel SAR Image Speckle-Reduction Filtering and Enhancement</h3>
+          <p>Establishes multidimensional SAR data consistency constraints, extracts stable weights from multichannel or multi-sublook responses, and unifies speckle suppression, coherent-structure preservation, and weak-scatterer detail protection.</p>
+        </article>
+
+        <article class="overview-card cat-visualization">
+          <span class="num">16</span>
+          <h3>SAR Image SSCC Color Visualization Enhancement</h3>
+          <p>Combines subband response, hue coding, amplitude-brightness mapping, and weak-scattering saturation constraints to form a color visualization route suited to high-resolution SAR structure interpretation and result display.</p>
+        </article>
+        </div>
+      </section>
+<section class="research-item cat-imaging" id="item-01">
+          <div class="content-frame">
+            <div class="section-kicker">Project 01</div>
+            <h2>Spaceborne SAR Ultra-High-Resolution Imaging Processing</h2>
+            <div class="intro-block">
+              <h3>Overview</h3>
+              <p>This work addresses imaging needs in spaceborne SAR missions that require high resolution, wide coverage, large squint angles, and rapid revisit. It resolves the central tension between high-fidelity imaging and rapid product generation. In complex geometries, strong-scattering urban scenes, long-strip observations, and batch production, a spaceborne system must preserve roads, building edges, linear structures, and bright point targets while still meeting mission timelines. Conventional precision imaging maintains geometry well but imposes heavy computation and depends on experienced parameter setup. Processing routes that only pursue speed often sacrifice target response, local texture, and radiometric stability. This work establishes quality constraints and configuration assessment mechanisms so that imaging accuracy, processing efficiency, scene adaptability, and interpretability are controlled under one technical standard.</p>
+<p>The route is based on high-fidelity time-domain imaging and introduces interpretable scale control, quality criteria, and parameter boundaries for engineering use. The processing outputs include full-scene images, local details, and quality changes under different configurations, forming a traceable image-quality assessment chain. Real-data results show continuous scene structure, compact responses of strong scatterers, and interpretable local texture under recommended configurations. When the processing configuration exceeds the reasonable range, image degradation can be identified and attributed, avoiding non-reproducible empirical tuning. The work turns large-scene spaceborne SAR imaging into a stable, bounded, and batch-deliverable image production capability.</p>
+<p>In mission use, the capability can serve as a fast focusing module in a spaceborne SAR ground processing chain and as image evidence for new-platform algorithm verification and application demonstration. Military applications include battlefield reconnaissance and surveillance, border and maritime patrol, routine airport and port monitoring, rapid revisits of high-value areas, and base-map production for remote-sensing intelligence. Civil applications include fine urban mapping, major infrastructure inspection, disaster emergency assessment, port and shipping supervision, natural-resource surveys, and commercial remote-sensing product generation. Deliverables include full-scene imaging results, local quality-observation images, configuration assessment materials, a fast focusing module, and a prototype processing workflow that can be integrated into domestic processing software and batch production environments.</p>
+            </div>
+            <div class="value-grid">
+              <div><strong>Technical Innovation</strong><p>Establishes the operating relationship among imaging scale, image quality, and task time limits, and defines interpretable processing boundaries for squinted, wide-scene, and strong-scattering conditions.</p></div>
+              <div><strong>Military Applications</strong><p>Supports battlefield reconnaissance and surveillance, border and maritime situational awareness, routine airport and port monitoring, rapid imaging of high-value areas, and base-map production for target interpretation and change analysis.</p></div>
+              <div><strong>Civil Applications</strong><p>Supports fine urban mapping, major infrastructure inspection, disaster emergency assessment, port and shipping supervision, natural-resource surveys, and commercial SAR image production chains.</p></div>
+              <div><strong>Deliverables</strong><p>Provides full-scene imaging results, local quality-observation images, configuration assessment materials, a fast focusing module, and a prototype workflow for batch deployment and customized remote-sensing products.</p></div>
+            </div>
+            <div class="gallery">
+              
+            <figure class="figure-card pair">
+              <img src="SAR技术成果展示版_assets/ffbp_fig01.jpg" alt="Typical real spaceborne SAR scene processed by fast high-fidelity imaging" loading="lazy">
+              <figcaption>Figure 1.1 Typical real spaceborne SAR scene processed by fast high-fidelity imaging</figcaption>
+            </figure>
+            
+
+            <figure class="figure-card pair">
+              <img src="SAR技术成果展示版_assets/ffbp_psf_contour.jpg" alt="Point spread function" loading="lazy">
+              <figcaption>Figure 1.2 Point spread function</figcaption>
+            </figure>
+            
+            </div>
+          </div>
+        </section>
+            
+        <section class="research-item cat-imaging" id="item-02">
+          <div class="content-frame">
+            <div class="section-kicker">Project 02</div>
+            <h2>Spaceborne SAR Multi-Swath TOPS-Mode Imaging</h2>
+            <div class="intro-block">
+              <h3>Overview</h3>
+              <p>This work targets raw-echo focusing for multi-swath TOPS-mode data such as Sentinel-1 IW. It addresses the imaging-chain complexity caused by wide-swath scanning, multi-burst stitching, azimuth-spectrum unfolding, and swath merging. TOPS mode obtains wide coverage through rapid antenna beam steering, but the raw data contain azimuth spectral folding, burst boundaries, and inter-swath differences. They cannot be focused as ordinary stripmap SAR data. If the processing chain is incomplete, the image may show seam breaks, azimuth ambiguity, uneven brightness, and geometric mismatch, which directly affects interpretation of coastlines, islands, urban texture, and sea-surface targets. The technique establishes independent parameter control and unified merging for IW1/IW2/IW3 swaths so that TOPS raw data can form continuous and interpretable wide-area SAR images.</p>
+<p>The processing chain covers DC component handling, azimuth-spectrum unfolding and upsampling, WKA/ECS focusing, azimuth-space unfolding, burst merging, and multi-swath full-scene stitching. The outputs include focused images for individual swaths, full-scene mosaics, and structural details of representative areas. Coverage from different swaths can be stitched into a complete scene, with continuous interpretation conditions for coastlines, island boundaries, land-sea transitions, and large-scale textures. The work demonstrates a complete capability from raw data to imaging products and provides foundation support for autonomous data processing, algorithm validation, raw-data rescue, and domestic processing-chain construction.</p>
+<p>Military applications include wide-area maritime reconnaissance, continuous monitoring of islands and coastal zones, base-map production over ship activity areas, rapid imaging of key regions, autonomous processing of external raw data, and verification of spaceborne SAR payloads. Civil applications include marine-environment monitoring, disaster emergency mapping, coastal-zone resource surveys, port and shipping supervision, land-cover updates, and commercial SAR data processing. Deliverables include IW swath imaging results, full-scene mosaics, a TOPS raw-data focusing workflow, burst-merging modules, batch scripts, and quality-review materials that can serve as core imaging units in spaceborne SAR ground processing chains.</p>
+            </div>
+            <div class="value-grid">
+              <div><strong>Technical Innovation</strong><p>Builds a complete TOPS raw-echo chain from azimuth-spectrum unfolding and precise focusing to burst merging and multi-swath stitching, forming an autonomous wide-coverage imaging capability.</p></div>
+              <div><strong>Military Applications</strong><p>Supports wide-area maritime reconnaissance, island and coastal-zone monitoring, base-map production over ship activity regions, rapid key-area imaging, external raw-data processing, and payload verification.</p></div>
+              <div><strong>Civil Applications</strong><p>Supports marine-environment monitoring, disaster emergency mapping, coastal-resource surveys, port and shipping supervision, land-cover updates, and commercial SAR data processing.</p></div>
+              <div><strong>Deliverables</strong><p>Provides IW swath imaging results, full-scene mosaics, a TOPS raw-data focusing workflow, burst-merging modules, batch scripts, and quality-review materials.</p></div>
+            </div>
+            <div class="gallery">
+              
+            <figure class="figure-card">
+              <img src="SAR技术成果展示版_assets/tops_iw_full_focus.jpg" alt="Sentinel-1 IW/TOPS multi-swath full-scene imaging result" loading="lazy">
+              <figcaption>Figure 2.1 Sentinel-1 IW/TOPS multi-swath full-scene imaging result</figcaption>
+            </figure>
+            
+
+            <figure class="figure-card">
+              <img src="SAR技术成果展示版_assets/tops_iw_strip_full_20211027.jpg" alt="Focused IW1/IW2/IW3 swath results" loading="lazy">
+              <figcaption>Figure 2.2 Focused IW1/IW2/IW3 swath results</figcaption>
+            </figure>
+            
+            </div>
+          </div>
+        </section>
+            
+        <section class="research-item cat-motion" id="item-03">
+          <div class="content-frame">
+            <div class="section-kicker">Project 03</div>
+            <h2>Multichannel Spaceborne/Airborne SAR GMTI-ATI Weak-Target Detection and Velocity Estimation</h2>
+            <div class="intro-block">
+              <h3>Overview</h3>
+              <p>This work addresses moving-target discovery, localization, review, and archiving in multichannel spaceborne and airborne SAR data, with emphasis on automated GMTI-ATI detection. Multichannel SAR is naturally sensitive to moving targets, but bright-spot screening or manual scene-by-scene interpretation cannot provide stable delivery under wide-area observation, complex clutter, and repeated missions. Based on inter-channel motion-sensitive differences and interferometric responses, the system connects candidate moving-target discovery, scene-level annotation, local target boxing, batch result organization, and review-material generation into one mission chain so that results can enter interpretation, verification, and archiving directly.</p>
+<p>The work converts multichannel observation advantages into traceable, reviewable, and archivable detection products. On real mission data, the system outputs candidate target positions, scene detection annotations, local chips, and archivable lists. For airports, ports, road nodes, and border or coastal regions, it first presents the overall spatial distribution of targets and then provides local boxed views for rapid analyst confirmation. In batch missions, results can be summarized by region, batch, and candidate target, supporting manual review, field verification, and multi-source intelligence comparison.</p>
+<p>Military applications include battlefield area surveillance, border and maritime patrol, airport and port warning, activity monitoring on key traffic corridors, and extraction of dynamic cues for high-value targets, supporting wide-area reconnaissance, target review, and situation updates. Civil applications include maritime supervision, disaster response, traffic operation sensing, port-area operation monitoring, abnormal low-altitude and ground activity alerts, and value-added commercial remote-sensing services. Deliverables include scene detection annotation maps, local target boxed views, batch summary results, archivable detection lists, and a front-end detection module that can be integrated into interpretation platforms, task management systems, or multi-source situation interfaces.</p>
+            </div>
+            <div class="value-grid">
+              <div><strong>Technical Innovation</strong><p>Converts motion-sensitive inter-channel differences into credible target-discrimination evidence and integrates candidate discovery, scene annotation, local review, and batch archiving into one chain.</p></div>
+              <div><strong>Military Applications</strong><p>Supports battlefield area surveillance, border and maritime patrol, airport and port warning, traffic-corridor activity monitoring, and dynamic cue extraction for high-value targets.</p></div>
+              <div><strong>Civil Applications</strong><p>Supports maritime supervision, disaster response, traffic operation sensing, port operation monitoring, abnormal activity alerts, and dynamic cue discovery in remote-sensing services.</p></div>
+              <div><strong>Deliverables</strong><p>Provides scene detection annotation maps, local target boxed views, batch summaries, and archivable detection lists, with a front-end detection module for platform integration.</p></div>
+            </div>
+            <div class="gallery">
+              
+            <figure class="figure-card wide natural-height">
+              <img src="SAR技术成果展示版_assets/full.png" alt="GMTI-ATI moving-target detection annotations in a representative scene" loading="lazy">
+              <figcaption>Figure 3.1 GMTI-ATI moving-target detection annotations in a representative scene</figcaption>
+            </figure>
+            
+
+            <figure class="figure-card wide natural-height">
+              <img src="SAR技术成果展示版_assets/boxed_crop_montage.jpg" alt="Local boxed moving-target velocity-estimation results" loading="lazy">
+              <figcaption>Figure 3.2 Local boxed moving-target velocity-estimation results</figcaption>
+            </figure>
+            
+            </div>
+          </div>
+        </section>
+            
+        <section class="research-item cat-motion" id="item-04">
+          <div class="content-frame">
+            <div class="section-kicker">Project 04</div>
+            <h2>Spaceborne SAR Moving-Target Sensing and Imaging Enhancement</h2>
+            <div class="intro-block">
+              <h3>Overview</h3>
+              <p>This work focuses on non-cooperative moving-target sensing and imaging enhancement in high-resolution spaceborne SAR images. In conventional focused products, moving targets often appear as smearing, defocus, displacement, and shape degradation. Analysts can see anomalies but cannot quickly judge target position, motion state, or mission value. In operational chains, the input is often an already focused SAR product, and it is difficult to return to raw echoes and redesign the full imaging process. This work uses focused imagery as the entry point, extracts moving-target cues from anomalous responses, and enhances, localizes, and labels the target region, turning blurred image phenomena into interpretable activity information.</p>
+<p>Existing results show that the capability can make slow moving targets such as taxiing aircraft clearer, reduce smearing for fast moving targets, and provide state cues consistent with scene operation. Motion-induced blur, smearing, and displacement are transformed into target activity information through before-and-after visual results, target annotations, and state prompts. The approach does not require reacquiring raw echo data and does not alter the existing SAR product supply chain, making it suitable for time-sensitive assessment and thematic product generation.</p>
+<p>Military applications include spaceborne reconnaissance and surveillance, monitoring of runways and aprons, port and near-shore target patrol, moving-target discovery on deep road networks and traffic nodes, and extraction of maneuvering-target cues for battlefield situation updates. Civil applications include civil-aviation airport operation assessment, maritime supervision, traffic emergency response, disaster rescue, key infrastructure safety inspection, and commercial remote-sensing value-added services. Deliverables include location annotation maps, target enhancement images, state-judgment results, and traceable explanatory materials that can be deployed between interpretation preprocessing and thematic product generation.</p>
+            </div>
+            <div class="value-grid">
+              <div><strong>Technical Innovation</strong><p>Extends focused SAR products beyond static interpretation by extracting moving-target activity information from image anomalies and converting enhancement, localization, and state cues into displayable results.</p></div>
+              <div><strong>Military Applications</strong><p>Supports spaceborne reconnaissance, runway and apron activity monitoring, port and near-shore patrol, moving-target discovery on road networks, and maneuvering-target cue extraction.</p></div>
+              <div><strong>Civil Applications</strong><p>Supports civil-aviation operation assessment, maritime supervision, traffic emergency response, disaster rescue, key infrastructure inspection, and commercial remote-sensing services.</p></div>
+              <div><strong>Deliverables</strong><p>Provides location annotations, target enhancement images, state-judgment results, and traceable materials as a lightweight unit for interpretation and task platforms.</p></div>
+            </div>
+            <div class="gallery">
+              
+            <figure class="figure-card">
+              <img src="SAR技术成果展示版_assets/motion_fig01.jpg" alt="Real airport SAR scene with moving-target position annotations" loading="lazy">
+              <figcaption>Figure 4.1 Real airport SAR scene with moving-target position annotations</figcaption>
+            </figure>
+            
+
+            <figure class="figure-card">
+              <img src="SAR技术成果展示版_assets/motion_fig02.png" alt="Moving-target imaging enhancement result" loading="lazy">
+              <figcaption>Figure 4.2 Moving-target imaging enhancement result</figcaption>
+            </figure>
+            
+
+            <figure class="figure-card natural-height">
+              <img src="SAR技术成果展示版_assets/motion_fig03.jpg" alt="Moving-state judgment result" loading="lazy">
+              <figcaption>Figure 4.3 Moving-state judgment result</figcaption>
+            </figure>
+            
+            </div>
+          </div>
+        </section>
+            
+        <section class="research-item cat-motion" id="item-05">
+          <div class="content-frame">
+            <div class="section-kicker">Project 05</div>
+            <h2>Spaceborne SAR Moving-Target Automated Detection and Visualization</h2>
+            <div class="intro-block">
+              <h3>Overview</h3>
+              <p>This work targets moving-target detection and visualization output in high-resolution single-channel spaceborne SAR images. Under single-channel conditions, multichannel methods such as GMTI-ATI cannot be directly used, while manual browsing is unable to cover large and complex scenes. Practical use requires answering three questions: whether candidate moving targets exist, where they are roughly located, and how they can be reviewed efficiently. Around this task chain, the work establishes an automated initial-screening workflow for single high-resolution SAR images, extracts candidate moving-target cues from complex backgrounds, and generates target overlays, candidate chips, and structured result files.</p>
+<p>The capability focuses on automatic initial screening and visual review under single-channel constraints, especially for moving-target cue discovery when multichannel interferometric observation is unavailable. In strong-scattering backgrounds, large scenes, and weak-motion cues, the method converts anomalous responses into browsable, reviewable, and analyzable result products. Overlay maps show spatial target distribution, candidate chips support target-by-target verification, and structured tables support ranking, filtering, and platform ingestion. This route complements GMTI-ATI systems: the single-channel method serves archived imagery and conventional products, while multichannel systems serve missions with channel observations.</p>
+<p>Military applications include activity cue discovery around key ports, airports, road nodes, coastlines, islands, and border passages, supporting wide-area situational awareness, abnormal-activity alerts, target review, and post-mission assessment. Civil applications include port and shipping supervision, key-road operation monitoring, coastal activity monitoring, emergency rescue situation awareness, post-disaster traffic recovery assessment, and key industrial-park inspection. Deliverables include detection overlay maps, candidate target chips, structured tables, and batch interfaces that move large SAR scenes from manual browsing to automatic screening followed by human confirmation.</p>
+            </div>
+            <div class="value-grid">
+              <div><strong>Technical Innovation</strong><p>Builds an automated initial-screening route for high-resolution single-channel spaceborne SAR moving targets without relying on ATI or multichannel interferometric information.</p></div>
+              <div><strong>Military Applications</strong><p>Supports activity cue discovery around key ports, airports, road nodes, coastlines, islands, and border passages for wide-area awareness, alerts, review, and assessment.</p></div>
+              <div><strong>Civil Applications</strong><p>Supports port and shipping supervision, key-road operation monitoring, coastal activity monitoring, emergency rescue awareness, post-disaster traffic assessment, and park inspection.</p></div>
+              <div><strong>Deliverables</strong><p>Provides detection overlays, candidate target chips, structured tables, and batch interfaces for thematic products and platform ingestion.</p></div>
+            </div>
+            <div class="gallery">
+              
+            <figure class="figure-card wide natural-height">
+              <img src="SAR技术成果展示版_assets/single_fig01.jpg" alt="Single-channel spaceborne SAR moving-target detection overlay" loading="lazy">
+              <figcaption>Figure 5.1 Single-channel spaceborne SAR moving-target detection overlay</figcaption>
+            </figure>
+            
+
+            <figure class="figure-card wide natural-height">
+              <img src="SAR技术成果展示版_assets/single_candidate_split_horizontal.jpg" alt="Candidate target chips and enhanced display" loading="lazy">
+              <figcaption>Figure 5.2 Candidate target chips and enhanced display</figcaption>
+            </figure>
+            
+            </div>
+          </div>
+        </section>
+            
+        <section class="research-item cat-polarimetric" id="item-06">
+          <div class="content-frame">
+            <div class="section-kicker">Project 06</div>
+            <h2>Polarimetric SAR Interference Suppression and Image Reconstruction</h2>
+            <div class="intro-block">
+              <h3>Overview</h3>
+              <p>This work addresses image-quality assurance for spaceborne SAR under complex electromagnetic environments, focusing on strong bright bands, wideband noise, burst blocks, repeater-like interference, and related contamination in dual-polarization SAR images. Strong interference damages radiometric consistency, texture continuity, and target interpretability, and its effects propagate into target recognition, change detection, annotation production, and thematic interpretation. Conventional frequency-domain removal, single-channel filtering, or strong smoothing often trades real texture for a superficially clean result. This work uses the difference between external interference and natural-scene scattering in dual-polarization observations to suppress contaminated regions directionally while preserving terrain boundaries, structural details, and amplitude relationships.</p>
+<p>Dual-polarization validation covers repeater-like interference, pulse burst interference, continuous wideband bands, and wideband noise. After processing, contaminated regions are suppressed, unaffected regions remain structurally stable, and images regain value for interpretation and product generation. The work provides before-and-after comparisons, reconstructed imagery, and quality-assessment materials. It is suitable for dual-polarization SAR preprocessing, quality repair, and batch product generation, including historical data, open data, and observations over electromagnetically complex regions.</p>
+<p>Military applications include reconnaissance image assurance under electronic-countermeasure conditions, continuous monitoring of key regions, restoration of contaminated imagery, coastal and island interpretation, and quality control for remote-sensing intelligence products. Civil applications include commercial remote-sensing quality control, disaster-monitoring image repair, marine and terrestrial resource surveys, infrastructure inspection in electromagnetically complex areas, and satellite historical data rehabilitation. Deliverables include before-and-after comparison images, interference-suppressed imagery, quality-index reports, and quality-control enhancement modules that can be embedded in SAR preprocessing and batch product generation.</p>
+            </div>
+            <div class="value-grid">
+              <div><strong>Technical Innovation</strong><p>Uses dual-polarization differences to suppress strong interference directionally while preserving terrain boundaries, structural details, and amplitude relationships across real interference scenarios.</p></div>
+              <div><strong>Military Applications</strong><p>Supports reconnaissance image assurance, key-region monitoring, contaminated-image restoration, coastal and island interpretation, and intelligence-product quality control.</p></div>
+              <div><strong>Civil Applications</strong><p>Supports commercial remote-sensing quality control, disaster image repair, marine and terrestrial resource surveys, infrastructure inspection, and historical satellite data rehabilitation.</p></div>
+              <div><strong>Deliverables</strong><p>Provides before-and-after comparisons, interference-suppressed imagery, quality-index reports, and quality-control enhancement modules for SAR preprocessing and batch production.</p></div>
+            </div>
+            <div class="gallery">
+              
+            <figure class="figure-card">
+              <img src="SAR技术成果展示版_assets/dualpol_fig01.jpg" alt="Suppression before and after high-power main-lobe full-bandwidth noise interference" loading="lazy">
+              <figcaption>Figure 6.1 Suppression before and after high-power main-lobe full-bandwidth noise interference</figcaption>
+            </figure>
+            
+
+            <figure class="figure-card">
+              <img src="SAR技术成果展示版_assets/dualpol_fig02.png" alt="Suppression before and after wideband noise interference" loading="lazy">
+              <figcaption>Figure 6.2 Suppression before and after wideband noise interference</figcaption>
+            </figure>
+            
+
+            <figure class="figure-card">
+              <img src="SAR技术成果展示版_assets/dualpol_fig03.png" alt="Suppression before and after repeater-modulated interference" loading="lazy">
+              <figcaption>Figure 6.3 Suppression before and after repeater-modulated interference</figcaption>
+            </figure>
+            
+            </div>
+          </div>
+        </section>
+            
+        <section class="research-item cat-detection" id="item-07">
+          <div class="content-frame">
+            <div class="section-kicker">Project 07</div>
+            <h2>SAR Active-Interference Feature Extraction and Adaptive Detection</h2>
+            <div class="intro-block">
+              <h3>Overview</h3>
+              <p>This work targets active-interference recognition and front-end quality inspection in single-look complex SAR images, focusing on variable interference forms, large strength differences, and unstable manual coverage. When spaceborne SAR operates in spectrum-sharing or electromagnetically dense regions, it may be affected by intermittent-sampling repeater interference, LFM pulses, wideband noise, and other electromagnetic radiation. Such contamination may appear in amplitude images as bright bands, blocks, stripes, or local anomalies, and simple gray-level judgment can easily confuse it with terrain scattering, sidelobes, and noise fluctuations. Starting from subband responses, this work uses the nonuniform energy distribution of interference pixels across subbands to build interpretable features based on subband contrast and entropy, turning vague image anomalies into localizable, screenable, and reviewable statistical objects.</p>
+<p>The work produces subband feature maps, detection annotations, and before-and-after processing comparisons. Its innovation lies in using fluctuation differences between interference and non-interference pixels in the subband domain for stable discrimination and introducing constant-false-alarm control into threshold determination. The method can serve as the entrance to interference suppression and as a batch SAR quality-inspection tool, automatically grading contaminated images, annotating affected regions, and generating review materials. Under application conditions where only SAR products are available and the raw-echo chain cannot be accessed, it provides an effective route for direct processing of focused products.</p>
+<p>Military applications include battlefield electromagnetic-environment monitoring, screening of contaminated reconnaissance images, image-quality judgment over key areas, interference-activity cueing, and front-end decision support for anti-interference processing. Civil applications include satellite data quality inspection, commercial remote-sensing product screening, disaster emergency image usability assessment, pre-cleaning for marine and terrestrial resource surveys, and historical image rehabilitation. Deliverables include subband contrast maps, subband entropy maps, interference annotation maps, suspected-region lists, quality-screening reports, and embeddable detection modules.</p>
+            </div>
+            <div class="value-grid">
+              <div><strong>Technical Innovation</strong><p>Uses subband contrast and subband entropy to characterize SAR-image interference fluctuations, converts subband energy differences into interpretable evidence, and supports automatic annotation under constant-false-alarm control.</p></div>
+              <div><strong>Military Applications</strong><p>Supports battlefield electromagnetic monitoring, contaminated reconnaissance image screening, key-area quality judgment, interference-activity cueing, and front-end processing decisions.</p></div>
+              <div><strong>Civil Applications</strong><p>Supports satellite data quality inspection, commercial product screening, disaster image usability assessment, resource-survey pre-cleaning, and historical image rehabilitation.</p></div>
+              <div><strong>Deliverables</strong><p>Provides subband feature maps, detection annotations, suspected-region lists, quality-screening reports, and detection modules for batch quality inspection and review platforms.</p></div>
+            </div>
+            <div class="gallery">
+              
+            <figure class="figure-card">
+              <img src="SAR技术成果展示版_assets/paper_subband_page14.png" alt="Subband contrast and entropy interference features with detection results" loading="lazy">
+              <figcaption>Figure 7.1 Subband contrast and entropy interference features with detection results</figcaption>
+            </figure>
+            
+
+            <figure class="figure-card">
+              <img src="SAR技术成果展示版_assets/yang_fig01.png" alt="Subband feature extraction result on Sentinel-1 SAR data" loading="lazy">
+              <figcaption>Figure 7.2 Subband feature extraction result on Sentinel-1 SAR data</figcaption>
+            </figure>
+            
+            </div>
+          </div>
+        </section>
+            
+        <section class="research-item cat-detection" id="item-08">
+          <div class="content-frame">
+            <div class="section-kicker">Project 08</div>
+            <h2>SAR Image Lambda-1 Constant-False-Alarm Interference Detection</h2>
+            <div class="intro-block">
+              <h3>Overview</h3>
+              <p>This work addresses adaptive interference detection and batch quality control in SAR images, solving the problems that weak interference is hard to detect, strong interference has unstable morphology, and fixed thresholds fail across scenes. When interference enters a SAR image, it often introduces a dominant component within local image blocks, reflected as an elevated maximum eigenvalue in the covariance structure. The method captures this structural change, treats image blocks as processing units, and detects interference-induced dominant features. The judgment therefore shifts from single-pixel gray-level anomalies to local data-structure anomalies, making the technique suitable for wide-area, multi-batch SAR imagery from different platforms.</p>
+<p>The work establishes a maximum-eigenvalue-driven adaptive detection mechanism and embeds constant-false-alarm control in threshold determination. Processing results include block detection maps, interference-region annotations, false-alarm control effects, and before-and-after review images. Strong interference, weak interference, and statistical differences caused by resolution and sampling mode can be processed under one standard. The technique can operate as an independent quality-inspection tool or as a front-end switch for later interference suppression, avoiding unnecessary processing of clean data.</p>
+<p>Military applications include quality inspection before reconnaissance image archiving, rapid annotation of contaminated regions, abnormal battlefield electromagnetic activity cueing, task routing for interference suppression, and usability judgment over key target areas. Civil applications include commercial satellite data production, mass SAR image archiving, disaster emergency image selection, maritime-supervision data quality inspection, and infrastructure-inspection image assessment. Deliverables include interference annotation maps, block-level quality labels, batch quality-control lists, abnormal-region review materials, and front-end detection software modules.</p>
+            </div>
+            <div class="value-grid">
+              <div><strong>Technical Innovation</strong><p>Uses the maximum eigenvalue of image blocks as evidence of interference-dominant components and builds adaptive constant-false-alarm detection for strong and weak interference.</p></div>
+              <div><strong>Military Applications</strong><p>Supports pre-archive reconnaissance image quality inspection, rapid contaminated-region annotation, battlefield electromagnetic cueing, suppression-task routing, and key-area usability judgment.</p></div>
+              <div><strong>Civil Applications</strong><p>Supports commercial satellite data production, mass SAR archiving, disaster image selection, maritime data quality inspection, and infrastructure image assessment.</p></div>
+              <div><strong>Deliverables</strong><p>Provides detection annotations, block-level quality labels, batch quality-control lists, abnormal-region review materials, and front-end detection modules.</p></div>
+            </div>
+            <div class="gallery">
+              
+            <figure class="figure-card wide fixed-height">
+              <img src="SAR技术成果展示版_assets/paper_lambda1_page11.png" alt="Lambda-1 detector interference annotation and filtering result" loading="lazy">
+              <figcaption>Figure 8.1 Lambda-1 detector interference annotation and filtering result</figcaption>
+            </figure>
+            
+            </div>
+          </div>
+        </section>
+            
+        <section class="research-item cat-suppression" id="item-09">
+          <div class="content-frame">
+            <div class="section-kicker">Project 09</div>
+            <h2>BSF: Block Subspace Filtering in the SAR Image Domain</h2>
+            <div class="intro-block">
+              <h3>Overview</h3>
+              <p>This work targets the removal of wideband, narrowband, continuous-wave, and pulsed interference in SAR images, addressing the difficulty of building a unified post-processing method when multiple interference types coexist. Spaceborne SAR operating in L, C, X, and other bands may be affected by radiation from broadcasting, communications, ground radar, navigation, and other electronic systems, forming electromagnetic artifacts of different shapes. Many types of interference have already entered focused image products, and raw echoes may not be available for renewed preprocessing. This work uses block subspace filtering in the image domain as the main route and directly estimates and removes interference components from SAR images.</p>
+<p>The innovation is twofold. First, image blocks are used as processing units to adapt to spatial variation in wide-area SAR data. Second, different interference forms are unified under a subspace-separation framework, avoiding a separate processing chain for each contamination type. Results cover multiple platforms and interference types, including before-and-after comparisons, interference-component images, and local detail preservation. The technique is well suited to batch processing of contaminated SAR data from ERS, ENVISAT/ASAR, Sentinel-1, GF-3, and other sources, providing usable inputs for later image interpretation, change detection, and coherent processing. The correspondence between the removed interference component and the recovered image is retained, allowing analysts to review whether the removed content is electromagnetic contamination rather than a real scene target.</p>
+<p>Military applications include repair of contaminated reconnaissance images, interpretation assurance for coastal and port targets, restoration of imagery over electronic-activity areas, batch mission data screening, and key-target review. Civil applications include commercial SAR product quality improvement, marine monitoring, disaster response, land-resource surveys, agricultural remote sensing, and historical data rehabilitation. Deliverables include block processing workflows, interference removal results, interference-component images, before-and-after comparison materials, and embeddable post-processing modules.</p>
+            </div>
+            <div class="value-grid">
+              <div><strong>Technical Innovation</strong><p>Uses block subspace structure to represent multiple interference types in SAR images, enabling unified estimation, separation, and removal in the image domain.</p></div>
+              <div><strong>Military Applications</strong><p>Supports contaminated reconnaissance image repair, coastal and port target interpretation assurance, imagery restoration over electronic-activity regions, batch screening, and target review.</p></div>
+              <div><strong>Civil Applications</strong><p>Supports commercial SAR product quality improvement, marine monitoring, disaster response, land-resource surveys, agricultural remote sensing, and historical data rehabilitation.</p></div>
+              <div><strong>Deliverables</strong><p>Provides block processing workflows, interference removal results, interference-component images, before-and-after comparison materials, and embeddable post-processing modules.</p></div>
+            </div>
+            <div class="gallery">
+              
+            <figure class="figure-card">
+              <img src="SAR技术成果展示版_assets/paper_bsf_page09.png" alt="Removal of multiple interference types by block subspace filtering" loading="lazy">
+              <figcaption>Figure 9.1 Removal of multiple interference types by block subspace filtering</figcaption>
+            </figure>
+            
+
+            <figure class="figure-card">
+              <img src="SAR技术成果展示版_assets/yang_fig03.png" alt="Composite interference suppression in a complex electromagnetic scene" loading="lazy">
+              <figcaption>Figure 9.2 Composite interference suppression in a complex electromagnetic scene</figcaption>
+            </figure>
+            
+            </div>
+          </div>
+        </section>
+            
+        <section class="research-item cat-suppression" id="item-10">
+          <div class="content-frame">
+            <div class="section-kicker">Project 10</div>
+            <h2>DPRCA: Dictionary-Robust PCA Interference Separation</h2>
+            <div class="intro-block">
+              <h3>Overview</h3>
+              <p>This work focuses on narrowband interference suppression in typical SAR systems and addresses the tension between low-rank interference separation and preservation of real radar echoes. Narrowband electromagnetic interference often has low-rank or spectrally sparse characteristics, but SAR echoes are not simple sparse sequences as in ordinary pulsed radar. Because SAR uses long pulses and synthetic aperture integration, point scatterers have extended responses in both range and azimuth. Directly applying ordinary sparse models can distort echo representation, while constructing a full two-dimensional dictionary introduces heavy storage and computation. This work builds low-cost dictionary operators consistent with SAR imaging physics and combines sparse representation of useful echoes with the low-rank property of interference.</p>
+<p>The innovation is to replace the large explicit two-dimensional dictionary with dictionary analysis and synthesis operators consistent with SAR imaging, and to separate useful echoes and interference components under a robust PCA framework. Outputs include contaminated images, recovered images, local details, and comparison indicators. The technique is suitable for narrowband interference scenarios where scattering structures must be preserved, especially when image quality and later interpretation reliability are critical. The processing emphasizes preservation of true scattering under SAR echo-model constraints. This boundary is particularly important in sparse strong-scattering scenes and reduces the risk of decomposing target echoes into interference components.</p>
+<p>Military applications include SAR data restoration under narrowband electromagnetic interference over key areas, protection of strong-scattering targets, reconnaissance image quality assurance, verification of interference suppression algorithms, and review of remote-sensing intelligence products. Civil applications include satellite image repair in communication or broadcasting contaminated bands, infrastructure inspection, resource surveys, disaster response, and historical data reprocessing. Deliverables include narrowband interference separation results, recovered imagery, local comparison chips, quality-assessment materials, and algorithm validation modules.</p>
+            </div>
+            <div class="value-grid">
+              <div><strong>Technical Innovation</strong><p>Combines SAR echo dictionary modeling with low-rank interference separation, replacing a large explicit two-dimensional dictionary with low-cost operators while preserving true scattering structures.</p></div>
+              <div><strong>Military Applications</strong><p>Supports SAR data restoration under narrowband interference, strong-scattering target protection, reconnaissance image quality assurance, algorithm verification, and product review.</p></div>
+              <div><strong>Civil Applications</strong><p>Supports satellite image repair in contaminated communication or broadcasting bands, infrastructure inspection, resource surveys, disaster response, and historical data reprocessing.</p></div>
+              <div><strong>Deliverables</strong><p>Provides narrowband interference separation results, recovered imagery, local comparison chips, quality-assessment materials, and algorithm validation modules.</p></div>
+            </div>
+            <div class="gallery">
+              
+            <figure class="figure-card wide fixed-height">
+              <img src="SAR技术成果展示版_assets/paper_drpca_page04.png" alt="Narrowband interference suppression by dictionary modeling and robust PCA separation" loading="lazy">
+              <figcaption>Figure 10.1 Narrowband interference suppression by dictionary modeling and robust PCA separation</figcaption>
+            </figure>
+            
+            </div>
+          </div>
+        </section>
+            
+        <section class="research-item cat-suppression" id="item-11">
+          <div class="content-frame">
+            <div class="section-kicker">Project 11</div>
+            <h2>RBSF: Robust Block Subspace Filtering for Heterogeneous SAR Scenes</h2>
+            <div class="intro-block">
+              <h3>Overview</h3>
+              <p>This work addresses interference removal in heterogeneous SAR scenes such as ports, urban areas, bridges, ships, and large facilities. It solves the problem that conventional block subspace filtering may weaken real scattering, create dark-line artifacts, or break structures near strong point targets. Operational SAR images are rarely homogeneous; bright scatterers and man-made structures are common. If these strong responses are mistaken for interference, processing may damage target highlights, edges, and local texture, affecting later target recognition and change detection. This work extends block subspace filtering with strong-scatterer protection by first identifying and shielding bright scattering pixels, then estimating the interference component and subtracting it from the original image.</p>
+<p>The innovation is to separate interference estimation from strong-scatterer protection and to constrain processing strength with image contrast, entropy, and related quality indicators so that subspace selection is closer to the image-recovery objective in different scenes. Results show comparisons between conventional and robust processing, preservation of strong scattering targets, suppression of dark-line artifacts, and restoration of local details. The technique is suitable for complex SAR images containing both strong interference and strong targets. It serves as an engineering enhancement to general BSF and reduces collateral damage in complex scenes. Local chips before and after strong-scatterer protection directly demonstrate preservation of target highlights, linear structures, and background texture.</p>
+<p>Military applications include restoration of contaminated imagery over port ships, airport facilities, bridge nodes, island targets, and key urban areas, safeguarding interpretation and target review of strong scatterers. Civil applications include port and shipping supervision, urban infrastructure inspection, bridge and road monitoring, disaster-damage assessment, and commercial satellite data repair. Deliverables include robust interference-removal images, strong-scatterer protection comparisons, quality-metric assessment materials, local before-and-after chips, and embeddable post-processing modules.</p>
+            </div>
+            <div class="value-grid">
+              <div><strong>Technical Innovation</strong><p>Introduces strong-scatterer protection and quality-metric constraints into block subspace filtering so that interference removal preserves bright targets and structural continuity.</p></div>
+              <div><strong>Military Applications</strong><p>Supports contaminated imagery restoration over ports, ships, airports, bridges, islands, and key urban areas while safeguarding strong-scatterer interpretation and target review.</p></div>
+              <div><strong>Civil Applications</strong><p>Supports port and shipping supervision, urban infrastructure inspection, bridge and road monitoring, disaster-damage assessment, and commercial satellite data repair.</p></div>
+              <div><strong>Deliverables</strong><p>Provides robust interference-removal images, strong-scatterer protection comparisons, quality-metric materials, local chips, and post-processing modules.</p></div>
+            </div>
+            <div class="gallery">
+              
+            <figure class="figure-card wide fixed-height">
+              <img src="SAR技术成果展示版_assets/paper_rbsf_page07.png" alt="Robust block subspace filtering for interference removal in heterogeneous scenes" loading="lazy">
+              <figcaption>Figure 11.1 Robust block subspace filtering for interference removal in heterogeneous scenes</figcaption>
+            </figure>
+            
+            </div>
+          </div>
+        </section>
+            
+        <section class="research-item cat-suppression" id="item-12">
+          <div class="content-frame">
+            <div class="section-kicker">Project 12</div>
+            <h2>2-D SPECAN: SAR Image Interference Spectral Analysis and Decoupled Separation</h2>
+            <div class="intro-block">
+              <h3>Overview</h3>
+              <p>This work targets spectral analysis, parameter estimation, and decoupled separation of LFM sweep interference in focused SAR images. It solves the need to repair interference when returning to the Level-0 raw-echo chain is not possible. In real workflows, large amounts of data circulate as SAR images or amplitude products, and conventional preprocessing cannot cover archived, distributed, or externally obtained SAR products. LFM interference often forms bright bands, sweep textures, and local radiometric artifacts in images. Direct filtering can damage terrain scattering and phase relationships. This work moves the problem into a two-dimensional spectral analysis and spectral-focusing framework, concentrates the interference in a controlled domain, and then performs selective suppression and image restoration.</p>
+<p>The innovation is to integrate two-dimensional spectral analysis, spectral focusing, parameter estimation, and selective separation into one processing chain, allowing contamination separation on focused SAR products without restarting the full imaging process. Outputs include interference-contaminated images, spectral focusing results, decoupled separation results, restored imagery, and local quality comparisons. The method is suitable for fast processing of scenes with clear interference forms, tight mission timelines, and wide data coverage. It complements image-domain block subspace filtering: the former emphasizes spectral interpretation and decoupling, while the latter emphasizes local structural adaptation.</p>
+<p>Military applications include rapid restoration of reconnaissance images contaminated by sweep radar interference, rescue processing of airport, port, coastal, and island imagery, interpretation assurance over key target areas, assessment of battlefield electromagnetic activity, and repair of remote-sensing intelligence products. Civil applications include rapid repair of commercial SAR data, disaster emergency image assurance, maritime supervision, infrastructure inspection, reuse of historically contaminated SAR products, and reliability assessment of remote-sensing services. Deliverables include two-dimensional spectral analysis results, spectral-focusing outputs, before-and-after interference removal comparisons, restored imagery, local review chips, and rapid processing modules.</p>
+            </div>
+            <div class="value-grid">
+              <div><strong>Technical Innovation</strong><p>Uses two-dimensional spectral analysis to drive LFM sweep interference spectral focusing, parameter estimation, and decoupled separation on focused SAR images.</p></div>
+              <div><strong>Military Applications</strong><p>Supports rapid restoration of sweep-interference reconnaissance images, rescue processing over airports, ports, coasts, and islands, key-area interpretation assurance, and electromagnetic impact assessment.</p></div>
+              <div><strong>Civil Applications</strong><p>Supports rapid commercial SAR repair, disaster image assurance, maritime supervision, infrastructure inspection, historical product reuse, and service reliability assessment.</p></div>
+              <div><strong>Deliverables</strong><p>Provides two-dimensional spectral analysis results, spectral-focusing outputs, before-and-after comparisons, restored imagery, local chips, and rapid processing modules.</p></div>
+            </div>
+            <div class="gallery">
+              
+            <figure class="figure-card wide fixed-height">
+              <img src="SAR技术成果展示版_assets/paper_specan_page09.png" alt="Before-and-after example of two-dimensional spectral-analysis filtering" loading="lazy">
+              <figcaption>Figure 12.1 Before-and-after example of two-dimensional spectral-analysis filtering</figcaption>
+            </figure>
+            
+
+            <figure class="figure-card wide fixed-height">
+              <img src="SAR技术成果展示版_assets/paper_lsfm_page03.png" alt="Sweep-interference decoupled separation driven by two-dimensional spectral analysis" loading="lazy">
+              <figcaption>Figure 12.2 Sweep-interference decoupled separation driven by two-dimensional spectral analysis</figcaption>
+            </figure>
+            
+            </div>
+          </div>
+        </section>
+            
+        <section class="research-item cat-suppression" id="item-13">
+          <div class="content-frame">
+            <div class="section-kicker">Project 13</div>
+            <h2>Sparse Parametric Estimation of Composite Sweep Interference in SAR Images</h2>
+            <div class="intro-block">
+              <h3>Overview</h3>
+              <p>This work addresses fine modeling and removal of composite sweep interference in the SAR image domain, solving the problem that practical interference is often not a single chirp component and cannot be fully represented by a conventional single-model method. In real electromagnetic environments, interference from different radar or communication systems may enter SAR images simultaneously, producing bright bands, sweep textures, and complex artifacts formed by multiple chirp components. If processing still assumes a single sweep structure, part of the interference may remain, and part of the real scattering may be damaged. This work represents composite interference as a combination of multiple sweep components and estimates modulation features in azimuth and range through sparse parametric modeling, providing more accurate inputs for later spectral focusing and removal.</p>
+<p>The innovation is to extend composite interference from a single-component assumption to a multi-component parametric representation, describe candidate structures with a discretized sweep dictionary, and select effective components under sparsity constraints. Outputs include composite-interference images, spectral-focusing results supported by parametric estimation, restored imagery, and wide-area processing comparisons. The technique is suitable for multi-source interference, mixed strong and weak interference, and nonideal sweep contamination. It can serve as an enhanced entry point to two-dimensional spectral-analysis filtering, turning complex artifacts from uninterpretable patterns into decomposable parametric objects. The representation also supports separate review of different interference components and reduces the risk that strong components mask weak ones.</p>
+<p>Military applications include restoration of contaminated SAR images under complex electromagnetic-countermeasure environments, interpretation of multi-source interference impacts, rescue processing over key target areas, and quality assurance for remote-sensing intelligence products. Civil applications include commercial SAR constellation data repair, quality inspection for marine and terrestrial monitoring products, disaster emergency image assurance, historical data rehabilitation, and reliability assessment of remote-sensing services. Deliverables include composite-interference parametric estimation results, spectral-focusing images, before-and-after comparisons, restored imagery, batch scripts, and software-module interfaces.</p>
+            </div>
+            <div class="value-grid">
+              <div><strong>Technical Innovation</strong><p>Represents composite sweep interference as a multi-component combination, estimates key modulation features through sparse parametric estimation, and drives spectral focusing and selective removal.</p></div>
+              <div><strong>Military Applications</strong><p>Supports contaminated SAR image restoration in complex electromagnetic environments, multi-source interference interpretation, key-area rescue processing, and intelligence-product quality assurance.</p></div>
+              <div><strong>Civil Applications</strong><p>Supports commercial SAR constellation repair, monitoring-product quality inspection, disaster image assurance, historical data rehabilitation, and service reliability assessment.</p></div>
+              <div><strong>Deliverables</strong><p>Provides composite-interference parametric estimation results, spectral-focusing images, before-and-after comparisons, restored imagery, batch scripts, and software interfaces.</p></div>
+            </div>
+            <div class="gallery">
+              
+            <figure class="figure-card">
+              <img src="SAR技术成果展示版_assets/paper_sparse_lfm_page04.jpg" alt="Composite sweep interference removal supported by sparse parametric estimation" loading="lazy">
+              <figcaption>Figure 13.1 Composite sweep interference removal supported by sparse parametric estimation</figcaption>
+            </figure>
+            
+
+            <figure class="figure-card">
+              <img src="SAR技术成果展示版_assets/yang_fig05.png" alt="Interference feature visualization in a complex electromagnetic scene" loading="lazy">
+              <figcaption>Figure 13.2 Interference feature visualization in a complex electromagnetic scene</figcaption>
+            </figure>
+            
+            </div>
+          </div>
+        </section>
+            
+        <section class="research-item cat-suppression" id="item-14">
+          <div class="content-frame">
+            <div class="section-kicker">Project 14</div>
+            <h2>SAR Spatial-Frequency Adaptive Interference Suppression</h2>
+            <div class="intro-block">
+              <h3>Overview</h3>
+              <p>This work addresses image-quality assurance for spaceborne SAR data in complex electromagnetic environments, focusing on wideband stripes, local bright bands, strong noise contamination, and scene radiometric nonuniformity. In real missions, contaminated data come from diverse sources, scene types are varied, and interference strength differs substantially. Tuning for a single scene cannot support batch delivery. The technique builds stable adaptation across platforms, scenes, and interference forms through joint spatial-frequency processing, emphasizing interpretability, structural preservation, and robust batch output.</p>
+<p>Existing results cover representative data including coasts, islands, sea surfaces, land regions, and TOPS-focused images. After processing, strong stripes and local contamination across the image are suppressed, while land-sea boundaries, coastlines, island textures, and background structures remain continuous. The image regains conditions for interpretation, quality inspection, and product release. Across different platforms, resolutions, and contamination forms, the work maintains stable suppression and low scene dependence. Before-and-after comparisons, applicable data types, and result forms support batch quality inspection and productized delivery.</p>
+<p>Military applications include spaceborne SAR reconnaissance imaging assurance under electromagnetic suppression, restoration of contaminated coastal, island, and port imagery, assessment of battlefield electromagnetic activity, rapid image generation over key target areas, and review of interference suppression effects. Civil applications include commercial SAR data quality inspection, marine monitoring, disaster response, port and shipping supervision, natural-resource surveys, and reprocessing of historically contaminated data. Deliverables include before-and-after interference suppression comparisons, restored imagery, batch scripts, quality-review materials, and software-module interfaces as stable quality-assurance units in SAR data production chains.</p>
+            </div>
+            <div class="value-grid">
+              <div><strong>Technical Innovation</strong><p>Forms a broadly applicable and robust spatial-frequency interference suppression capability across SAR data types and contamination forms while preserving major terrain structures and interpretation conditions.</p></div>
+              <div><strong>Military Applications</strong><p>Supports spaceborne SAR imaging assurance under electromagnetic suppression, coastal and port imagery restoration, electromagnetic activity assessment, key-area rapid output, and algorithm comparison.</p></div>
+              <div><strong>Civil Applications</strong><p>Supports commercial SAR data quality inspection, marine monitoring, disaster response, port supervision, natural-resource surveys, and historical contaminated data reprocessing.</p></div>
+              <div><strong>Deliverables</strong><p>Provides before-and-after suppression comparisons, restored imagery, batch scripts, quality-review materials, and software interfaces for SAR production and quality-control workflows.</p></div>
+            </div>
+            <div class="gallery">
+              
+            <figure class="figure-card">
+              <img src="SAR技术成果展示版_assets/subband_asf_bsf.jpg" alt="Spatial-frequency interference suppression in a representative contaminated scene" loading="lazy">
+              <figcaption>Figure 14.1 Spatial-frequency interference suppression in a representative contaminated scene</figcaption>
+            </figure>
+            
+
+            <figure class="figure-card">
+              <img src="SAR技术成果展示版_assets/subband_focusing_compare.jpg" alt="Before-and-after interference suppression on TOPS focused imagery" loading="lazy">
+              <figcaption>Figure 14.2 Before-and-after interference suppression on TOPS focused imagery</figcaption>
+            </figure>
+            
+            </div>
+          </div>
+        </section>
+            
+        <section class="research-item cat-enhancement" id="item-15">
+          <div class="content-frame">
+            <div class="section-kicker">Project 15</div>
+            <h2>N-Channel SAR Image Speckle-Reduction Filtering and Enhancement</h2>
+            <div class="intro-block">
+              <h3>Overview</h3>
+              <p>This work addresses speckle noise, coherent texture degradation, and weak-scattering detail loss in high-resolution SAR amplitude images, interferograms, multiview color displays, and contaminated images. SAR imagery differs from optical imagery because speckle is closely tied to coherent imaging physics. Direct smoothing weakens point targets, road boundaries, building contours, and interferometric phase structures. Searching only for similar patches in a single image also fails to use redundancy already present in multichannel, multi-sublook, multipolarization, or multidimensional display results. The technique treats multidimensional SAR data as the processing object, finds stable similarity relationships in spatial and dimensional neighborhoods, and converts consistent responses of the same terrain in different dimensions into filtering weights so that noise suppression and structural preservation are completed in one workflow.</p>
+<p>Comparisons before and after processing on amplitude images, interferometric color images, and noise-contaminated scenes show that noise granularity in homogeneous areas is reduced, roads, building edges, and strong scatterers remain clear, color interferometric textures become more continuous, and interpretable structures in contaminated regions are restored. The method supports multidimensional SAR inputs, can be deployed under CPU/GPU conditions, and can be combined with color coding, coherent filtering, image enhancement, and thematic interpretation workflows. Its core value lies in preserving coherent information and weak-target cues, providing a more stable image basis for later detection, classification, interferometric analysis, and result display.</p>
+<p>Military applications include pre-interpretation enhancement of key-area SAR images, repair of low-SNR reconnaissance imagery, airport and port facility recognition, fine observation over border and maritime regions, review of contaminated images, and quality assurance for multidimensional SAR products. Civil applications include urban infrastructure inspection, disaster emergency interpretation, surface-deformation observation, mining and port-area monitoring, commercial remote-sensing product enhancement, and high-resolution SAR image release. Deliverables include amplitude-image enhancement results, interferogram enhancement results, contaminated-scene restoration images, batch scripts, GPU-accelerated filtering modules, and embeddable image-enhancement interfaces.</p>
+            </div>
+            <div class="value-grid">
+              <div><strong>Technical Innovation</strong><p>Establishes multidimensional SAR data consistency constraints and extracts stable weights from multichannel or multi-sublook responses to unify speckle suppression, coherent-structure preservation, and weak-scatterer protection.</p></div>
+              <div><strong>Military Applications</strong><p>Supports pre-interpretation reconnaissance enhancement, low-SNR image repair, airport and port facility recognition, border and maritime fine observation, contaminated-image review, and multidimensional SAR product quality control.</p></div>
+              <div><strong>Civil Applications</strong><p>Supports urban infrastructure inspection, disaster emergency interpretation, surface-deformation observation, mining and port monitoring, commercial product enhancement, and high-resolution SAR release.</p></div>
+              <div><strong>Deliverables</strong><p>Provides amplitude enhancement, interferogram enhancement, contaminated-scene restoration images, batch scripts, GPU-accelerated filtering modules, and embeddable enhancement interfaces.</p></div>
+            </div>
+            <div class="gallery">
+              
+            
+
+
+              
+            
+<figure class="figure-card">
+              <img src="SAR技术成果展示版_assets/nl_sar_ifg_compare.jpg" alt="SAR interferometric color image enhancement compared with mean filtering" loading="lazy">
+              <figcaption>Figure 15.1 SAR interferometric color image enhancement compared with mean filtering</figcaption>
+            </figure>
+            
+            
+
+              
+            
+<figure class="figure-card">
+              <img src="SAR技术成果展示版_assets/nl_sar_ifg2_compare.jpg" alt="Interferogram detail comparison" loading="lazy">
+              <figcaption>Figure 15.2 Interferogram detail comparison</figcaption>
+            </figure>
+            
+
+            
+
+            
+            
+
+            
+
+            
+
+            
+            </div>
+          </div>
+        </section>
+            
+        <section class="research-item cat-visualization" id="item-16">
+          <div class="content-frame">
+            <div class="section-kicker">Project 16</div>
+            <h2>SAR Image SSCC Color Visualization Enhancement</h2>
+            <div class="intro-block">
+              <h3>Overview</h3>
+              <p>This work addresses display, manual interpretation, and rapid browsing of high-resolution SAR image products through SSCC, Chromatic Coding for High-resolution SAR Visualization. Conventional SAR grayscale images express scattering intensity but do not intuitively distinguish different directions, subbands, or structural responses. Common color sublook display methods can overexpose strong-scattering regions and introduce mixed colors in weak-scattering backgrounds, compressing details in airports, urban areas, ports, and roads. Starting from subband energy distribution, hue coding, and amplitude-brightness mapping, SSCC converts structural information hidden in spectral and sublook differences into observable color differences, making strong scatterers, linear structures, building outlines, and terrain textures easier to browse rapidly.</p>
+<p>In implementation, SSCC divides a SAR image into multiple subbands, forms subband intensity responses, and then completes hue synthesis, amplitude control, and weak-scattering saturation constraints in RGB/HSV color space. Results are shown through visual comparison between the final color image and an ICEYE CSI-style result. Existing images show clearer color separation for bright targets, more stable color control in dark weak-scattering backgrounds, and better layering of runways, building groups, road boundaries, and strong-scattering facilities within the same image. The statement is limited to the interpretation and display level supported by the existing image materials and does not introduce additional unprovided quantitative indicators. The technique is suitable at the end of SAR image production as an enhanced display product beyond grayscale imagery.</p>
+<p>Military applications include airport and port target interpretation, recognition of urban and industrial facilities, rapid browsing of key regions, remote-sensing intelligence result display, target-review material preparation, and base-map enhancement for multi-source situation interfaces. Civil applications include commercial remote-sensing sample display, fine urban mapping, infrastructure inspection, disaster-site interpretation, port and park management, and public SAR product release. Deliverables include SSCC color-enhanced images, paired grayscale and color products, ICEYE CSI-style comparisons, batch plotting scripts, visualization parameter configurations, and platform display interfaces.</p>
+            </div>
+            <div class="value-grid">
+              <div><strong>Technical Innovation</strong><p>Combines subband response, hue coding, amplitude-brightness mapping, and weak-scattering saturation constraints to support high-resolution SAR structure interpretation and display.</p></div>
+              <div><strong>Military Applications</strong><p>Supports airport and port target interpretation, urban and industrial facility recognition, key-region browsing, intelligence result display, review-material preparation, and situation-interface base-map enhancement.</p></div>
+              <div><strong>Civil Applications</strong><p>Supports commercial remote-sensing sample display, fine urban mapping, infrastructure inspection, disaster-site interpretation, port and park management, and public SAR product release.</p></div>
+              <div><strong>Deliverables</strong><p>Provides SSCC color-enhanced images, paired grayscale and color products, ICEYE CSI-style comparisons, batch plotting scripts, visualization configurations, and display interfaces.</p></div>
+            </div>
+            <div class="gallery">
+              
+            <figure class="figure-card">
+              <img src="SAR技术成果展示版_assets/sscc_comparison.jpg" alt="Comparison between SSCC color enhancement and CSI-style results" loading="lazy">
+              <figcaption>Figure 16.1 Comparison between SSCC color enhancement and CSI-style results</figcaption>
+            </figure>
+            
+
+            <figure class="figure-card">
+              <img src="SAR技术成果展示版_assets/sscc_iceye_qatar_csi.jpg" alt="SAR color sublook visualization result over Qatar" loading="lazy">
+              <figcaption>Figure 16.2 SAR color sublook visualization result over Qatar</figcaption>
+            </figure>
+            
+            </div>
+          </div>
+        </section>
+            
+      <footer><div class="content-frame">Radar Imaging, Detection, and Electronic Countermeasure Research</div></footer>
+    </main>
+  </div>
+  <script>
+    (function () {
+      const key = "sar-theme";
+      const select = document.getElementById("themeSelect");
+      const allowed = new Set(Array.from(select.options).map(option => option.value));
+      const saved = localStorage.getItem(key);
+      const initial = allowed.has(saved) ? saved : "command";
+      document.documentElement.dataset.theme = initial;
+      select.value = initial;
+      select.addEventListener("change", function () {
+        const value = allowed.has(select.value) ? select.value : "classic";
+        document.documentElement.dataset.theme = value;
+        localStorage.setItem(key, value);
+      });
+    }());
+
+    (function () {
+      const key = "sar-language";
+      const current = document.documentElement.lang.toLowerCase().startsWith("zh") ? "zh" : "en";
+      const pages = { zh: "index.html", en: "index_en.html" };
+      const buttons = Array.from(document.querySelectorAll("#languageSelect [data-lang]"));
+      const manual = localStorage.getItem(key);
+      const zhCountryCodes = new Set(["CN", "SG"]);
+
+      function setActive(lang) {
+        buttons.forEach(button => {
+          button.setAttribute("aria-pressed", button.dataset.lang === lang ? "true" : "false");
+        });
+      }
+
+      function targetUrl(lang) {
+        const url = new URL(pages[lang], window.location.href);
+        url.hash = window.location.hash;
+        return url.href;
+      }
+
+      function switchTo(lang, mode) {
+        if (!pages[lang]) return;
+        setActive(lang);
+        if (mode === "manual") {
+          localStorage.setItem(key, lang);
+        }
+        if (lang !== current) {
+          const url = targetUrl(lang);
+          if (mode === "manual") {
+            window.location.assign(url);
+          } else {
+            window.location.replace(url);
+          }
+        }
+      }
+
+      async function fetchCountryCode() {
+        try {
+          const response = await fetch("https://ipapi.co/json/", { cache: "no-store" });
+          if (response.ok) {
+            const data = await response.json();
+            const code = String(data.country_code || data.country || "").toUpperCase();
+            if (code) return code;
+          }
+        } catch (error) {
+          // Fall through to the second public geolocation endpoint.
+        }
+        try {
+          const response = await fetch("https://ipwho.is/", { cache: "no-store" });
+          if (response.ok) {
+            const data = await response.json();
+            const code = String(data.country_code || "").toUpperCase();
+            if (code) return code;
+          }
+        } catch (error) {
+          // Keep the current static page when IP geolocation is unavailable.
+        }
+        return "";
+      }
+
+      buttons.forEach(button => {
+        button.addEventListener("click", function () {
+          switchTo(button.dataset.lang, "manual");
+        });
+      });
+
+      setActive(current);
+      if (manual === "zh" || manual === "en") {
+        switchTo(manual, "stored");
+        return;
+      }
+
+      fetchCountryCode().then(code => {
+        if (localStorage.getItem(key)) return;
+        const detected = zhCountryCodes.has(code) ? "zh" : "en";
+        switchTo(detected, "auto");
+      });
+    }());
+    </script>
+</body>
+</html>

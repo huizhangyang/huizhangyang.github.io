@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>雷达成像/探测/对抗</title>
+  <title>杨会章科研成果展板</title>
   <style>
     :root, :root[data-theme="classic"] {
       --content-width: 1080px;
@@ -231,6 +231,48 @@
       outline: none;
     }
     .theme-switcher select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 20%, transparent); }
+    .language-switcher {
+      margin: 0 0 16px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+    }
+    .language-switcher label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .language-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .language-options button {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      color: var(--ink);
+      background: var(--paper);
+      font: inherit;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .language-options button:hover,
+    .language-options button:focus-visible {
+      border-color: var(--accent);
+      outline: none;
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 20%, transparent);
+    }
+    .language-options button[aria-pressed="true"] {
+      border-color: var(--accent);
+      background: var(--accent);
+      color: #050505;
+    }
+
     nav { display: grid; gap: 8px; }
     nav a {
       --cat-color: var(--accent);
@@ -390,14 +432,14 @@
       font-size: 13px;
       line-height: 1.55;
     }
-    .achievement {
+    .research-item {
       --cat-color: var(--accent);
       padding: 58px var(--page-pad);
       border-bottom: 1px solid var(--line);
       border-top: 5px solid var(--cat-color);
       background: var(--bg);
     }
-    .achievement:nth-of-type(even) { background: var(--paper); }
+    .research-item:nth-of-type(even) { background: var(--paper); }
     .content-frame {
       max-width: var(--content-width);
       width: 100%;
@@ -409,7 +451,7 @@
       letter-spacing: 0;
       font-size: 13px;
     }
-    .achievement h2 {
+    .research-item h2 {
       margin: 8px 0 24px;
       color: var(--deep);
       font-size: clamp(26px, 3.2vw, 42px);
@@ -527,7 +569,7 @@
       nav a { grid-template-columns: 30px 1fr; }
       .hero p { font-size: 16px; }
       .stat-card { min-height: 76px; }
-      .achievement { padding-top: 42px; padding-bottom: 42px; }
+      .research-item { padding-top: 42px; padding-bottom: 42px; }
     }
     </style>
 </head>
@@ -553,6 +595,15 @@
 <option value="hf-papers">HF Papers</option>
         </select>
       </div>
+      <div class="language-switcher">
+        <label>语言版本</label>
+        <div class="language-options" id="languageSelect" role="group" aria-label="语言版本">
+          <button type="button" data-lang="zh">中文</button>
+          <button type="button" data-lang="en">English</button>
+        </div>
+      </div>
+
+
       <nav><a class="cat-imaging" href="#item-01"><span>01</span>星载 SAR 超高分辨率成像处理技术</a>
 <a class="cat-imaging" href="#item-02"><span>02</span>星载 SAR 多测绘带 TOPS 模式成像技术</a>
 <a class="cat-motion" href="#item-03"><span>03</span>多通道星/机载 SAR GMTI-ATI 弱目标检测与测速技术</a>
@@ -733,7 +784,7 @@
         </div>
       </section>
       
-        <section class="achievement cat-imaging" id="item-01">
+        <section class="research-item cat-imaging" id="item-01">
           <div class="content-frame">
             <div class="section-kicker">成果 01</div>
             <h2>星载 SAR 超高分辨率成像处理技术</h2>
@@ -766,7 +817,7 @@
           </div>
         </section>
             
-        <section class="achievement cat-imaging" id="item-02">
+        <section class="research-item cat-imaging" id="item-02">
           <div class="content-frame">
             <div class="section-kicker">成果 02</div>
             <h2>星载 SAR 多测绘带 TOPS 模式成像技术</h2>
@@ -799,7 +850,7 @@
           </div>
         </section>
             
-        <section class="achievement cat-motion" id="item-03">
+        <section class="research-item cat-motion" id="item-03">
           <div class="content-frame">
             <div class="section-kicker">成果 03</div>
             <h2>多通道星/机载 SAR GMTI-ATI 弱目标检测与测速技术</h2>
@@ -832,7 +883,7 @@
           </div>
         </section>
             
-        <section class="achievement cat-motion" id="item-04">
+        <section class="research-item cat-motion" id="item-04">
           <div class="content-frame">
             <div class="section-kicker">成果 04</div>
             <h2>星载 SAR 动目标感知与成像增强技术</h2>
@@ -871,7 +922,7 @@
           </div>
         </section>
             
-        <section class="achievement cat-motion" id="item-05">
+        <section class="research-item cat-motion" id="item-05">
           <div class="content-frame">
             <div class="section-kicker">成果 05</div>
             <h2>星载 SAR 运动目标自动化检测与可视化技术</h2>
@@ -904,7 +955,7 @@
           </div>
         </section>
             
-        <section class="achievement cat-polarimetric" id="item-06">
+        <section class="research-item cat-polarimetric" id="item-06">
           <div class="content-frame">
             <div class="section-kicker">成果 06</div>
             <h2>极化 SAR 干扰抑制与图像重构技术</h2>
@@ -943,7 +994,7 @@
           </div>
         </section>
             
-        <section class="achievement cat-detection" id="item-07">
+        <section class="research-item cat-detection" id="item-07">
           <div class="content-frame">
             <div class="section-kicker">成果 07</div>
             <h2>SAR 有源干扰识别特征提取与自适应检测技术</h2>
@@ -976,7 +1027,7 @@
           </div>
         </section>
             
-        <section class="achievement cat-detection" id="item-08">
+        <section class="research-item cat-detection" id="item-08">
           <div class="content-frame">
             <div class="section-kicker">成果 08</div>
             <h2>SAR 图像 Lambda-1 恒虚警干扰检测技术</h2>
@@ -1003,7 +1054,7 @@
           </div>
         </section>
             
-        <section class="achievement cat-suppression" id="item-09">
+        <section class="research-item cat-suppression" id="item-09">
           <div class="content-frame">
             <div class="section-kicker">成果 09</div>
             <h2>BSF: SAR 图像域分块子空间滤波技术</h2>
@@ -1036,7 +1087,7 @@
           </div>
         </section>
             
-        <section class="achievement cat-suppression" id="item-10">
+        <section class="research-item cat-suppression" id="item-10">
           <div class="content-frame">
             <div class="section-kicker">成果 10</div>
             <h2>DPRCA: 字典稳健 PCA 干扰分离技术</h2>
@@ -1063,7 +1114,7 @@
           </div>
         </section>
             
-        <section class="achievement cat-suppression" id="item-11">
+        <section class="research-item cat-suppression" id="item-11">
           <div class="content-frame">
             <div class="section-kicker">成果 11</div>
             <h2>RBSF: 异质 SAR 场景鲁棒分块子空间滤波技术</h2>
@@ -1090,7 +1141,7 @@
           </div>
         </section>
             
-        <section class="achievement cat-suppression" id="item-12">
+        <section class="research-item cat-suppression" id="item-12">
           <div class="content-frame">
             <div class="section-kicker">成果 12</div>
             <h2>2-D SPECAN: SAR 图像干扰谱分析与解耦分离技术</h2>
@@ -1123,7 +1174,7 @@
           </div>
         </section>
             
-        <section class="achievement cat-suppression" id="item-13">
+        <section class="research-item cat-suppression" id="item-13">
           <div class="content-frame">
             <div class="section-kicker">成果 13</div>
             <h2>SAR 图像域复合扫频干扰稀疏参数化估计技术</h2>
@@ -1156,7 +1207,7 @@
           </div>
         </section>
             
-        <section class="achievement cat-suppression" id="item-14">
+        <section class="research-item cat-suppression" id="item-14">
           <div class="content-frame">
             <div class="section-kicker">成果 14</div>
             <h2>SAR 空频域自适应干扰抑制技术</h2>
@@ -1189,7 +1240,7 @@
           </div>
         </section>
             
-        <section class="achievement cat-enhancement" id="item-15">
+        <section class="research-item cat-enhancement" id="item-15">
           <div class="content-frame">
             <div class="section-kicker">成果 15</div>
             <h2>N 通道 SAR 图像去相干斑滤波增强技术</h2>
@@ -1241,7 +1292,7 @@
           </div>
         </section>
             
-        <section class="achievement cat-visualization" id="item-16">
+        <section class="research-item cat-visualization" id="item-16">
           <div class="content-frame">
             <div class="section-kicker">成果 16</div>
             <h2>SAR 图像 SSCC 彩色可视化增强技术</h2>
@@ -1290,6 +1341,85 @@
         const value = allowed.has(select.value) ? select.value : "classic";
         document.documentElement.dataset.theme = value;
         localStorage.setItem(key, value);
+      });
+    }());
+
+    (function () {
+      const key = "sar-language";
+      const current = document.documentElement.lang.toLowerCase().startsWith("zh") ? "zh" : "en";
+      const pages = { zh: "index.html", en: "index_en.html" };
+      const buttons = Array.from(document.querySelectorAll("#languageSelect [data-lang]"));
+      const manual = localStorage.getItem(key);
+      const zhCountryCodes = new Set(["CN", "SG"]);
+
+      function setActive(lang) {
+        buttons.forEach(button => {
+          button.setAttribute("aria-pressed", button.dataset.lang === lang ? "true" : "false");
+        });
+      }
+
+      function targetUrl(lang) {
+        const url = new URL(pages[lang], window.location.href);
+        url.hash = window.location.hash;
+        return url.href;
+      }
+
+      function switchTo(lang, mode) {
+        if (!pages[lang]) return;
+        setActive(lang);
+        if (mode === "manual") {
+          localStorage.setItem(key, lang);
+        }
+        if (lang !== current) {
+          const url = targetUrl(lang);
+          if (mode === "manual") {
+            window.location.assign(url);
+          } else {
+            window.location.replace(url);
+          }
+        }
+      }
+
+      async function fetchCountryCode() {
+        try {
+          const response = await fetch("https://ipapi.co/json/", { cache: "no-store" });
+          if (response.ok) {
+            const data = await response.json();
+            const code = String(data.country_code || data.country || "").toUpperCase();
+            if (code) return code;
+          }
+        } catch (error) {
+          // Fall through to the second public geolocation endpoint.
+        }
+        try {
+          const response = await fetch("https://ipwho.is/", { cache: "no-store" });
+          if (response.ok) {
+            const data = await response.json();
+            const code = String(data.country_code || "").toUpperCase();
+            if (code) return code;
+          }
+        } catch (error) {
+          // Keep the current static page when IP geolocation is unavailable.
+        }
+        return "";
+      }
+
+      buttons.forEach(button => {
+        button.addEventListener("click", function () {
+          switchTo(button.dataset.lang, "manual");
+        });
+      });
+
+      setActive(current);
+      if (manual === "zh" || manual === "en") {
+        switchTo(manual, "stored");
+        return;
+      }
+
+      fetchCountryCode().then(code => {
+        if (localStorage.getItem(key)) return;
+        const detected = zhCountryCodes.has(code) ? "zh" : "en";
+        switchTo(detected, "auto");
       });
     }());
     </script>
